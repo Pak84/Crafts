@@ -28,7 +28,6 @@ PART
 	modMass = 0
 	modSize = 0,0,0
 	link = mk3CargoBayL_4294355238
-	link = miniFuelTank_4294210040
 	link = GearSmall_4293972634
 	link = NoseCone_4294612700
 	attN = bottom,mk3CargoBayL_4294355238
@@ -292,13 +291,13 @@ PART
 	modSize = 0,0,0
 	link = ShuttleTruss_4294492378
 	link = ShuttleBottomLong_4294492350
-	link = Airlock_4294491190
 	link = ETdecoupler5m_4294491090
 	link = CAFuelCell_4294490204
 	link = CAFuelCell_4294490176
 	link = CAFuelCell_4294490148
 	link = MMUrackE_4294490010
 	link = CA.Reservetank_4294468726
+	link = Airlock_4294491190
 	attN = top2,Airlock_4294491190
 	attN = bottom2,ShuttleTruss_4294492378
 	attN = top,mk3Cockpit.Shuttle_4294442140
@@ -369,63 +368,6 @@ PART
 		UPGRADESAPPLIED
 		{
 		}
-	}
-}
-PART
-{
-	part = miniFuelTank_4294210040
-	partName = Part
-	pos = -0.0330758803,18.1345234,-0.434385777
-	attPos = -1.73414435E-07,0.267501116,2.25068951
-	attPos0 = 1.73414435E-07,-1.56750154,-1.55068874
-	rot = 0.49999994,0.50000006,0.49999994,0.50000006
-	attRot = 0,0,0,1
-	attRot0 = 0.5,0.5,0.5,0.5
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	srfN = srfAttach,mk3Cockpit.Shuttle_4294442140
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	RESOURCE
-	{
-		name = LiquidFuel
-		amount = 18
-		maxAmount = 18
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Oxidizer
-		amount = 22
-		maxAmount = 22
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
 	}
 }
 PART
@@ -2465,89 +2407,6 @@ PART
 }
 PART
 {
-	part = Airlock_4294491190
-	partName = Part
-	pos = -0.0330773108,18.1643772,-1.13439143
-	attPos = 0,0,0
-	attPos0 = 0,4.97999954,1.19209261E-07
-	rot = 0,0,0,1
-	attRot = 0,0,0,1
-	attRot0 = 0,0,0,1
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 0
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	link = dockingPort2_4294490244
-	attN = top,mk3CargoBayL_4294355238
-	attN = top 1,dockingPort2_4294490244
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = FSmeshSwitch
-		isEnabled = True
-		selectedObject = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTripLogger
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		Log
-		{
-			flight = 0
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 300
-		maxAmount = 300
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-}
-PART
-{
 	part = ETdecoupler5m_4294491090
 	partName = Part
 	pos = -0.0330725424,8.73859787,0.741164446
@@ -2610,7 +2469,7 @@ PART
 	pos = -3.15342569,7.90730476,0.141421556
 	attPos = -0.113164902,-1.00135803E-05,0.00990353338
 	attPos0 = -1.37696695,-2.03750348,-2.06025973E-07
-	rot = 2.77555756E-14,-0.999048293,-7.10542736E-14,-0.0436193235
+	rot = 3.13082893E-14,-0.999048293,-7.10542736E-14,-0.0436193235
 	attRot = -0.47771439,-0.47771439,0.521333754,-0.521333754
 	attRot0 = -3.5739351E-08,1,1.20883229E-07,1.00582824E-07
 	mir = 1,1,1
@@ -2698,7 +2557,7 @@ PART
 	pos = 3.08727908,7.90730286,0.141421556
 	attPos = -0.113157392,-1.26361847E-05,-0.00990869198
 	attPos0 = -1.37696433,-2.03750181,-4.64916138E-06
-	rot = -5.06639481E-07,-0.043619372,9.31338207E-09,-0.999048233
+	rot = -5.06639481E-07,-0.043619372,9.31339628E-09,-0.999048233
 	attRot = -0.47771439,-0.47771439,0.521333754,-0.521333754
 	attRot0 = -1.85117017E-07,1,4.39378169E-07,-1.30385146E-07
 	mir = 1,1,1
@@ -2786,7 +2645,7 @@ PART
 	pos = -5.60203218,7.90730476,-0.0739201307
 	attPos = -0.100524187,-8.10623169E-06,0.00879107602
 	attPos0 = -3.84766555,-2.03750443,7.91623975E-08
-	rot = 2.77555756E-14,-0.999048293,-7.10542736E-14,-0.0436193235
+	rot = 3.13082893E-14,-0.999048293,-7.10542736E-14,-0.0436193235
 	attRot = -0.47771439,-0.47771439,0.521333754,-0.521333754
 	attRot0 = -3.5739351E-08,1,1.20883229E-07,1.00582824E-07
 	mir = 1,1,1
@@ -2874,7 +2733,7 @@ PART
 	pos = 5.5358839,7.90730286,-0.0739209652
 	attPos = -0.100512743,-1.12056732E-05,-0.00879621599
 	attPos0 = -3.84766293,-2.03750467,-4.94718415E-06
-	rot = -5.06639481E-07,-0.043619372,9.31338207E-09,-0.999048233
+	rot = -5.06639481E-07,-0.043619372,9.31339628E-09,-0.999048233
 	attRot = -0.47771439,-0.47771439,0.521333754,-0.521333754
 	attRot0 = -1.85117017E-07,1,4.39378169E-07,-1.30385146E-07
 	mir = 1,1,1
@@ -3109,7 +2968,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -3126,7 +2985,7 @@ PART
 		{
 			OnAction
 			{
-				actionGroup = Custom03
+				actionGroup = None
 			}
 			ShutdownAction
 			{
@@ -3256,7 +3115,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -3273,7 +3132,7 @@ PART
 		{
 			OnAction
 			{
-				actionGroup = Custom03
+				actionGroup = None
 			}
 			ShutdownAction
 			{
@@ -3525,80 +3384,6 @@ PART
 		hideFlow = False
 		isVisible = True
 		flowMode = Both
-	}
-}
-PART
-{
-	part = dockingPort2_4294490244
-	partName = Part
-	pos = -0.0330773108,17.43437,-2.19167089
-	attPos = 0,0,0.0807236433
-	attPos0 = 0,-0.72999984,-1.13800049
-	rot = 0.707106829,0,0,-0.707106829
-	attRot = 0.707106709,0,0,-0.707106709
-	attRot0 = 0.707106829,0,0,-0.707106829
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = 0
-	attm = 0
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	attN = bottom,Airlock_4294491190
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleDockingNode
-		isEnabled = True
-		crossfeed = True
-		stagingEnabled = False
-		state = Ready
-		dockUId = 0
-		dockNodeIdx = 0
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			UndockAction
-			{
-				actionGroup = None
-			}
-			DecoupleAction
-			{
-				actionGroup = None
-			}
-			EnableXFeedAction
-			{
-				actionGroup = None
-			}
-			DisableXFeedAction
-			{
-				actionGroup = None
-			}
-			ToggleXFeedAction
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
 	}
 }
 PART
@@ -4007,7 +3792,7 @@ PART
 {
 	part = CA.ET_4294486628
 	partName = Part
-	pos = -0.0330641977,7.47590065,3.56626153
+	pos = -0.0330641977,7.47590065,3.56626248
 	attPos = 0,0.22987175,0
 	attPos0 = -2.82506156,-1.49257231,7.62939135E-06
 	rot = -2.39452902E-12,1.00000012,-6.19888306E-06,-1.51991844E-06
@@ -4133,7 +3918,7 @@ PART
 {
 	part = CA.ETbutt_4294483010
 	partName = Part
-	pos = -0.0330641977,7.47589684,3.56626534
+	pos = -0.0330641977,7.47589684,3.5662663
 	attPos = 0,0,0
 	attPos0 = 9.09494789E-12,-3.81473137E-06,-2.86097747E-06
 	rot = -4.29878355E-13,0,-2.78888024E-12,1.00000012
@@ -4203,7 +3988,7 @@ PART
 {
 	part = CA.decouplerSRB_4294550078
 	partName = Part
-	pos = -4.02217245,12.2749557,3.56622052
+	pos = -4.02217484,12.2749557,3.56622148
 	attPos = 0,0,0
 	attPos0 = 3.98904419,4.79905605,-2.86102363E-06
 	rot = -3.99351393E-06,-0.707105815,4.52995573E-06,0.707107961
@@ -4309,7 +4094,7 @@ PART
 {
 	part = CA.decouplerSRB_4294479146
 	partName = Part
-	pos = 3.95604682,12.2749596,3.56621003
+	pos = 3.95604873,12.2749596,3.56621099
 	attPos = 0,0,0
 	attPos0 = -3.98904467,4.79905558,-2.90870739E-05
 	rot = -3.87430327E-06,0.707105815,-4.52995437E-06,0.707107961
@@ -4415,7 +4200,7 @@ PART
 {
 	part = CA.SRB4_4294704780
 	partName = Part
-	pos = -4.02217102,12.6649532,3.56627584
+	pos = -4.0221734,12.6649532,3.56627679
 	attPos = 0,0,0
 	attPos0 = 5.9947437E-05,0.389996678,-1.72636794E-06
 	rot = -1.70530257E-12,0.707106888,-2.35189646E-12,0.707106888
@@ -4454,7 +4239,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -4567,7 +4352,7 @@ PART
 {
 	part = CA.SRBchute_4294526328
 	partName = Part
-	pos = -4.02217245,23.1350079,3.56628346
+	pos = -4.02217484,23.1350079,3.56628442
 	attPos = 0,0,0
 	attPos0 = -1.80234269E-06,10.4700022,-1.90736773E-06
 	rot = 1.70530257E-12,-0.707106888,2.35189646E-12,-0.707106888
@@ -4758,7 +4543,7 @@ PART
 {
 	part = CA.SRBnose_4294699358
 	partName = Part
-	pos = -4.02216959,23.383009,3.56628823
+	pos = -4.02217197,23.383009,3.56628919
 	attPos = 0,0,0
 	attPos0 = -1.90735727E-06,0.248000696,1.93214828E-06
 	rot = 8.94081893E-08,0.382683367,1.19210029E-07,-0.923879743
@@ -4791,7 +4576,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -4858,7 +4643,7 @@ PART
 {
 	part = CA.boosterPack_4294746656
 	partName = Part
-	pos = -3.14783168,3.10450363,2.69192696
+	pos = -3.14783359,3.10450363,2.69192719
 	attPos = 0,0,0
 	attPos0 = 0.874338031,-9.56041145,0.87433058
 	rot = 0.1999643,-0.373612404,0.0828278065,0.901980042
@@ -4891,7 +4676,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -4958,7 +4743,7 @@ PART
 {
 	part = launchClamp1_4294745902
 	partName = Part
-	pos = -1.87737501,1.28542328,3.56627059
+	pos = -1.87737548,1.28542328,3.56627154
 	attPos = 0,0,0
 	attPos0 = 1.54483189E-07,-11.3794889,2.14475775
 	rot = 1.78813693E-07,-0.707106769,-1.49009452E-07,0.707107008
@@ -5063,10 +4848,10 @@ PART
 {
 	part = launchClamp1_4294681448
 	partName = Part
-	pos = -5.47385979,1.3526535,2.11458373
+	pos = -5.47386217,1.3526535,2.11458421
 	attPos = 0,0,0
 	attPos0 = 1.45167434,-11.3122606,-1.45167017
-	rot = -1.49003029E-07,-0.382683456,-1.49011015E-07,-0.923879683
+	rot = -1.49001892E-07,-0.382683456,-1.49010845E-07,-0.923879683
 	attRot = 0,0,0,1
 	attRot0 = 9.09494377E-13,0.382683396,-2.10733944E-07,-0.923879504
 	mir = 1,1,1
@@ -5101,7 +4886,7 @@ PART
 		scaleFactor = 0.797720373
 		height = 2.01280594
 		stagingEnabled = True
-		towerRot = 1.49002958E-07,0.382683456,1.4901056E-07,-0.923879504
+		towerRot = 1.49001679E-07,0.382683456,1.4901056E-07,-0.923879504
 		EVENTS
 		{
 		}
@@ -5168,7 +4953,7 @@ PART
 {
 	part = CA.SRB4_4294740446
 	partName = Part
-	pos = 3.95604491,12.664959,3.5662663
+	pos = 3.95604682,12.664959,3.56626725
 	attPos = 0,0,0
 	attPos0 = -6.0835373E-05,0.389998585,-2.26861266E-06
 	rot = -9.9475983E-14,-0.707106888,1.38555833E-12,0.707106888
@@ -5207,7 +4992,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -5320,7 +5105,7 @@ PART
 {
 	part = CA.SRBchute_4294740298
 	partName = Part
-	pos = 3.95604634,23.1350155,3.56627154
+	pos = 3.95604825,23.1350155,3.5662725
 	attPos = 0,0,0
 	attPos0 = -1.80234269E-06,10.4700022,-1.90736773E-06
 	rot = -9.9475983E-14,-0.707106888,1.38555833E-12,0.707106888
@@ -5511,10 +5296,10 @@ PART
 {
 	part = CA.SRBnose_4294740214
 	partName = Part
-	pos = 3.95604348,23.3830128,3.56627727
+	pos = 3.95604539,23.3830128,3.56627822
 	attPos = 0,0,0
 	attPos0 = -1.90735727E-06,0.248000696,1.93214828E-06
-	rot = -3.27829071E-07,0.382683098,7.45069144E-08,0.923879921
+	rot = -3.27828189E-07,0.382683069,7.45066728E-08,0.923879862
 	attRot = 3.78731038E-08,-0.923879504,-6.23100078E-08,0.382683724
 	attRot0 = 3.78731002E-08,-0.923879385,-6.23100007E-08,0.382683665
 	mir = 1,1,1
@@ -5544,7 +5329,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -5611,10 +5396,10 @@ PART
 {
 	part = CA.boosterPack_4294740102
 	partName = Part
-	pos = 3.08170342,3.10450745,2.69191909
+	pos = 3.08170509,3.10450745,2.69191933
 	attPos = 0,0,0
 	attPos0 = 0.874338031,-9.56041145,0.87433058
-	rot = 0.199963987,0.373612374,-0.0828278661,0.901980042
+	rot = 0.199963957,0.373612374,-0.0828278661,0.901980042
 	attRot = 0.216439635,0,0,0.976296067
 	attRot0 = 0.082827948,-0.901979864,0.199964166,0.373612285
 	mir = 1,1,1
@@ -5644,7 +5429,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -5711,7 +5496,7 @@ PART
 {
 	part = launchClamp1_4294739860
 	partName = Part
-	pos = 1.81124842,1.28541946,3.56626964
+	pos = 1.8112489,1.28541946,3.56627059
 	attPos = 0,0,0
 	attPos0 = 1.54483189E-07,-11.3794889,2.14475775
 	rot = 1.78811774E-07,0.707106769,1.49009779E-07,0.707107008
@@ -5816,10 +5601,10 @@ PART
 {
 	part = launchClamp1_4294739734
 	partName = Part
-	pos = 5.40772629,1.35265732,2.11456847
+	pos = 5.40772915,1.35265732,2.11456847
 	attPos = 0,0,0
 	attPos0 = 1.45167434,-11.3122606,-1.45167017
-	rot = 8.94106833E-08,-0.382683426,-1.63917321E-07,0.923879743
+	rot = 8.94118131E-08,-0.382683426,-1.63917818E-07,0.923879743
 	attRot = 0,0,0,1
 	attRot0 = 9.09494377E-13,0.382683396,-2.10733944E-07,-0.923879504
 	mir = 1,1,1
@@ -5854,7 +5639,7 @@ PART
 		scaleFactor = 0.797721267
 		height = 2.01280975
 		stagingEnabled = True
-		towerRot = -8.94102712E-08,0.382683396,1.63916994E-07,0.923879564
+		towerRot = -8.9410598E-08,0.382683396,1.63917306E-07,0.923879564
 		EVENTS
 		{
 		}
@@ -5921,7 +5706,7 @@ PART
 {
 	part = launchClamp1_4294681774
 	partName = Part
-	pos = -6.17675877,1.31412888,3.56627965
+	pos = -6.17676353,1.31412888,3.5662806
 	attPos = 0,0,0
 	attPos0 = 3.51657036E-06,-11.3507786,-2.15453482
 	rot = -1.78813536E-07,-0.707106709,-8.94058658E-08,-0.707107067
@@ -6026,7 +5811,7 @@ PART
 {
 	part = launchClamp1_4294737448
 	partName = Part
-	pos = 6.11062431,1.31412888,3.56626391
+	pos = 6.11062908,1.31412888,3.56626487
 	attPos = 0,0,0
 	attPos0 = -3.27815178E-06,-11.3507824,-2.15453172
 	rot = 1.78814034E-07,-0.707106709,-8.9407628E-08,0.707107067
@@ -6338,7 +6123,7 @@ PART
 {
 	part = CA.ETnose_4294480216
 	partName = Part
-	pos = -0.0330641977,24.9759007,3.56604505
+	pos = -0.0330641977,24.9759007,3.566046
 	attPos = 0,0,0
 	attPos0 = -4.49517645E-10,17.5,-6.25965015E-07
 	rot = -5.04485342E-13,0,-1.42108547E-13,1.00000012
@@ -6437,10 +6222,10 @@ PART
 {
 	part = CAMMU_4294735506
 	partName = Part
-	pos = 1.28822279,15.6772079,-0.51559782
+	pos = 1.28822279,15.6772079,-0.51559788
 	attPos = 0,0,0
 	attPos0 = 2.38420483E-09,0.29000023,-0.23999998
-	rot = 0.49999997,-0.500000119,0.5,-0.5
+	rot = 0.49999994,-0.500000119,0.5,-0.50000006
 	attRot = 0.49999994,-0.49999994,0.49999994,-0.49999994
 	attRot0 = 2.98023224E-08,5.96046448E-08,2.98023224E-08,1
 	mir = 1,1,1
@@ -6730,6 +6515,163 @@ PART
 		Log
 		{
 			flight = 0
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = Airlock_4294491190
+	partName = Part
+	pos = -0.0330773108,18.1642876,-1.1343925
+	attPos = 0,0,0
+	attPos0 = 0,4.9800005,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = dockingPort2_4294490244
+	attN = top,mk3CargoBayL_4294355238
+	attN = top 1,dockingPort2_4294490244
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = FSmeshSwitch
+		isEnabled = True
+		selectedObject = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTripLogger
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		Log
+		{
+			flight = 0
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 300
+		maxAmount = 300
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = dockingPort2_4294490244
+	partName = Part
+	pos = -0.0330773108,17.4342804,-2.19167185
+	attPos = 0,0,0.0807236433
+	attPos0 = 0,-0.72999984,-1.13800049
+	rot = 0.707106829,0,0,-0.707106829
+	attRot = 0.707106709,0,0,-0.707106709
+	attRot0 = 0.707106829,0,0,-0.707106829
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	attN = bottom,Airlock_4294491190
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleDockingNode
+		isEnabled = True
+		crossfeed = True
+		stagingEnabled = False
+		state = Ready
+		dockUId = 0
+		dockNodeIdx = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			UndockAction
+			{
+				actionGroup = None
+			}
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+			EnableXFeedAction
+			{
+				actionGroup = None
+			}
+			DisableXFeedAction
+			{
+				actionGroup = None
+			}
+			ToggleXFeedAction
+			{
+				actionGroup = None
+			}
 		}
 		UPGRADESAPPLIED
 		{
