@@ -1,8 +1,8 @@
 ship = CA - Mk3 Orbiter Flight Testing
-version = 1.2.2
+version = 1.3.0
 description = Test out the Shuttle's capabilities with a full suite of science equipment and 2 small satellites.¨¨Action Groups;¨2 - Toggle Fuel Cells¨3 - Toggle OMS Engines¨4 - Toggle ME Yaw/Roll Gimbal¨5 - Toggle ME¨7 - Toggle Cargo Bay Doors¨9 - Deploy Airbrake¨0 - Deploy Body Flap
 type = VAB
-size = 13.2343864,43.9826355,14.2080593
+size = 13.2343864,43.9826355,14.2080612
 PART
 {
 	part = mk3Cockpit.Shuttle_4294442140
@@ -300,6 +300,10 @@ PART
 	link = ScienceBox_4294693666
 	link = structuralPanel1_4294631534
 	link = CA.Reservetank_4294468726
+	link = CA.decalName_4294712750
+	link = CA.decalName_4294710816
+	link = CA.decalSide_4294651970
+	link = CA.decalSide_4294651672
 	attN = top2,Airlock_4294491190
 	attN = top,mk3Cockpit.Shuttle_4294442140
 	attN = bottom,ShuttleBottomLong_4294492350
@@ -317,9 +321,9 @@ PART
 		name = ModuleAnimateGeneric
 		isEnabled = True
 		aniState = LOCKED
-		animSwitch = True
-		animTime = 0
-		animSpeed = -80
+		animSwitch = False
+		animTime = 1
+		animSpeed = 80
 		deployPercent = 100
 		animationIsDisabled = False
 		stagingEnabled = True
@@ -490,6 +494,7 @@ PART
 		name = ModuleWheelDeployment
 		isEnabled = True
 		shieldedCanDeploy = False
+		stateDisplayString = Retracted
 		stateString = Retracted
 		stagingEnabled = True
 		position = 0
@@ -933,6 +938,7 @@ PART
 	modSize = 0,0,0
 	link = CA.Elevon2_4294490976
 	link = CA.Elevon1_4294490880
+	link = CA.decalFlag_4294715996
 	sym = CADelta_4294492232
 	srfN = srfAttach,ShuttleBottomLong_4294492350
 	EVENTS
@@ -1403,6 +1409,7 @@ PART
 		name = ModuleWheelDeployment
 		isEnabled = True
 		shieldedCanDeploy = False
+		stateDisplayString = Retracted
 		stateString = Retracted
 		stagingEnabled = True
 		position = 0
@@ -1697,6 +1704,7 @@ PART
 		name = ModuleWheelDeployment
 		isEnabled = True
 		shieldedCanDeploy = False
+		stateDisplayString = Retracted
 		stateString = Retracted
 		stagingEnabled = True
 		position = 0
@@ -2091,6 +2099,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleSurfaceFX
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
@@ -2222,6 +2245,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleSurfaceFX
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
@@ -2347,6 +2385,21 @@ PART
 			{
 				actionGroup = Custom04
 			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSurfaceFX
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -2500,7 +2553,7 @@ PART
 	pos = -3.15342569,7.90730476,0.141421556
 	attPos = -0.113164902,-1.00135803E-05,0.00990353338
 	attPos0 = -1.37696695,-2.03750348,-2.06025973E-07
-	rot = 4.19664303E-14,-0.999048293,-7.10542736E-14,-0.0436193235
+	rot = 4.90718577E-14,-0.999048293,-7.10542736E-14,-0.0436193235
 	attRot = -0.47771439,-0.47771439,0.521333754,-0.521333754
 	attRot0 = -3.5739351E-08,1,1.20883229E-07,1.00582824E-07
 	mir = 1,1,1
@@ -2588,7 +2641,7 @@ PART
 	pos = 3.08727908,7.90730286,0.141421556
 	attPos = -0.113157392,-1.26361847E-05,-0.00990869198
 	attPos0 = -1.37696433,-2.03750181,-4.64916138E-06
-	rot = -5.06639481E-07,-0.043619372,9.31343891E-09,-0.999048233
+	rot = -5.06639481E-07,-0.043619372,9.31346733E-09,-0.999048233
 	attRot = -0.47771439,-0.47771439,0.521333754,-0.521333754
 	attRot0 = -1.85117017E-07,1,4.39378169E-07,-1.30385146E-07
 	mir = 1,1,1
@@ -2676,7 +2729,7 @@ PART
 	pos = -5.60203218,7.90730476,-0.0739201307
 	attPos = -0.100524187,-8.10623169E-06,0.00879107602
 	attPos0 = -3.84766555,-2.03750443,7.91623975E-08
-	rot = 4.19664303E-14,-0.999048293,-7.10542736E-14,-0.0436193235
+	rot = 4.90718577E-14,-0.999048293,-7.10542736E-14,-0.0436193235
 	attRot = -0.47771439,-0.47771439,0.521333754,-0.521333754
 	attRot0 = -3.5739351E-08,1,1.20883229E-07,1.00582824E-07
 	mir = 1,1,1
@@ -2764,7 +2817,7 @@ PART
 	pos = 5.5358839,7.90730286,-0.0739209652
 	attPos = -0.100512743,-1.12056732E-05,-0.00879621599
 	attPos0 = -3.84766293,-2.03750467,-4.94718415E-06
-	rot = -5.06639481E-07,-0.043619372,9.31343891E-09,-0.999048233
+	rot = -5.06639481E-07,-0.043619372,9.31346733E-09,-0.999048233
 	attRot = -0.47771439,-0.47771439,0.521333754,-0.521333754
 	attRot0 = -1.85117017E-07,1,4.39378169E-07,-1.30385146E-07
 	mir = 1,1,1
@@ -2999,7 +3052,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEnginesFX
+		name = ModuleEngines
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -3072,22 +3125,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = FXModuleAnimateThrottle
-		isEnabled = True
-		animState = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -3146,7 +3183,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEnginesFX
+		name = ModuleEngines
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -3219,22 +3256,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = FXModuleAnimateThrottle
-		isEnabled = True
-		animState = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -3791,7 +3812,7 @@ PART
 {
 	part = CA.ET_4294486628
 	partName = Part
-	pos = -0.0330641977,7.47590065,3.56626534
+	pos = -0.0330641977,7.47590065,3.56626725
 	attPos = 0,0.22987175,0
 	attPos0 = -2.82506156,-1.49257231,7.62939135E-06
 	rot = -2.39452902E-12,1.00000012,-6.19888306E-06,-1.51991844E-06
@@ -3917,7 +3938,7 @@ PART
 {
 	part = CA.ETbutt_4294483010
 	partName = Part
-	pos = -0.0330641977,7.47589684,3.56626916
+	pos = -0.0330641977,7.47589684,3.56627107
 	attPos = 0,0,0
 	attPos0 = 9.09494789E-12,-3.81473137E-06,-2.86097747E-06
 	rot = -4.29878355E-13,0,-2.78888024E-12,1.00000012
@@ -3987,7 +4008,7 @@ PART
 {
 	part = CA.decouplerSRB_4294550078
 	partName = Part
-	pos = -4.02218199,12.2749557,3.56622434
+	pos = -4.02218676,12.2749557,3.56622624
 	attPos = 0,0,0
 	attPos0 = 3.98904419,4.79905605,-2.86102363E-06
 	rot = -3.99351393E-06,-0.707105815,4.52995573E-06,0.707107961
@@ -4093,7 +4114,7 @@ PART
 {
 	part = CA.decouplerSRB_4294479146
 	partName = Part
-	pos = 3.95605445,12.2749596,3.56621385
+	pos = 3.95605826,12.2749596,3.56621575
 	attPos = 0,0,0
 	attPos0 = -3.98904467,4.79905558,-2.90870739E-05
 	rot = -3.87430327E-06,0.707105815,-4.52995437E-06,0.707107961
@@ -4199,7 +4220,7 @@ PART
 {
 	part = CA.SRB4_4294704780
 	partName = Part
-	pos = -4.02218056,12.6649532,3.56627965
+	pos = -4.02218533,12.6649532,3.56628156
 	attPos = 0,0,0
 	attPos0 = 5.9947437E-05,0.389996678,-1.72636794E-06
 	rot = -1.70530257E-12,0.707106888,-2.35189646E-12,0.707106888
@@ -4238,7 +4259,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEnginesFX
+		name = ModuleEngines
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -4351,7 +4372,7 @@ PART
 {
 	part = CA.SRBchute_4294526328
 	partName = Part
-	pos = -4.02218199,23.1350079,3.56628728
+	pos = -4.02218676,23.1350079,3.56628919
 	attPos = 0,0,0
 	attPos0 = -1.80234269E-06,10.4700022,-1.90736773E-06
 	rot = 1.70530257E-12,-0.707106888,2.35189646E-12,-0.707106888
@@ -4542,7 +4563,7 @@ PART
 {
 	part = CA.SRBnose_4294699358
 	partName = Part
-	pos = -4.02217913,23.383009,3.56629205
+	pos = -4.0221839,23.383009,3.56629395
 	attPos = 0,0,0
 	attPos0 = -1.90735727E-06,0.248000696,1.93214828E-06
 	rot = 8.94081893E-08,0.382683367,1.19210029E-07,-0.923879743
@@ -4575,7 +4596,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEnginesFX
+		name = ModuleEngines
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -4642,7 +4663,7 @@ PART
 {
 	part = CA.boosterPack_4294746656
 	partName = Part
-	pos = -3.14783931,3.10450363,2.69192791
+	pos = -3.14784312,3.10450363,2.69192839
 	attPos = 0,0,0
 	attPos0 = 0.874338031,-9.56041145,0.87433058
 	rot = 0.1999643,-0.373612404,0.0828278065,0.901980042
@@ -4675,7 +4696,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEnginesFX
+		name = ModuleEngines
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -4742,7 +4763,7 @@ PART
 {
 	part = launchClamp1_4294745902
 	partName = Part
-	pos = -1.87737691,1.28542328,3.5662744
+	pos = -1.87737787,1.28542328,3.56627631
 	attPos = 0,0,0
 	attPos0 = 1.54483189E-07,-11.3794889,2.14475775
 	rot = 1.78813693E-07,-0.707106769,-1.49009452E-07,0.707107008
@@ -4847,10 +4868,10 @@ PART
 {
 	part = launchClamp1_4294681448
 	partName = Part
-	pos = -5.47386932,1.3526535,2.11458564
+	pos = -5.47387409,1.3526535,2.11458659
 	attPos = 0,0,0
 	attPos0 = 1.45167434,-11.3122606,-1.45167017
-	rot = -1.48999803E-07,-0.382683456,-1.49011001E-07,-0.923879683
+	rot = -1.48997074E-07,-0.382683456,-1.49010518E-07,-0.923879683
 	attRot = 0,0,0,1
 	attRot0 = 9.09494377E-13,0.382683396,-2.10733944E-07,-0.923879504
 	mir = 1,1,1
@@ -4885,7 +4906,7 @@ PART
 		scaleFactor = 0.797720373
 		height = 2.01280594
 		stagingEnabled = True
-		towerRot = 1.48999746E-07,0.382683456,1.4901056E-07,-0.923879504
+		towerRot = 1.48997174E-07,0.382683456,1.49010575E-07,-0.923879504
 		EVENTS
 		{
 		}
@@ -4952,7 +4973,7 @@ PART
 {
 	part = CA.SRB4_4294740446
 	partName = Part
-	pos = 3.95605254,12.664959,3.56627011
+	pos = 3.95605636,12.664959,3.56627202
 	attPos = 0,0,0
 	attPos0 = -6.0835373E-05,0.389998585,-2.26861266E-06
 	rot = -9.9475983E-14,-0.707106888,1.38555833E-12,0.707106888
@@ -4991,7 +5012,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEnginesFX
+		name = ModuleEngines
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -5104,7 +5125,7 @@ PART
 {
 	part = CA.SRBchute_4294740298
 	partName = Part
-	pos = 3.95605397,23.1350155,3.56627536
+	pos = 3.95605779,23.1350155,3.56627727
 	attPos = 0,0,0
 	attPos0 = -1.80234269E-06,10.4700022,-1.90736773E-06
 	rot = -9.9475983E-14,-0.707106888,1.38555833E-12,0.707106888
@@ -5295,10 +5316,10 @@ PART
 {
 	part = CA.SRBnose_4294740214
 	partName = Part
-	pos = 3.95605111,23.3830128,3.56628108
+	pos = 3.95605493,23.3830128,3.56628299
 	attPos = 0,0,0
 	attPos0 = -1.90735727E-06,0.248000696,1.93214828E-06
-	rot = -3.27827081E-07,0.382683098,7.45055502E-08,0.923879921
+	rot = -3.27825887E-07,0.382683098,7.45062749E-08,0.923879921
 	attRot = 3.78731038E-08,-0.923879504,-6.23100078E-08,0.382683724
 	attRot0 = 3.78731002E-08,-0.923879385,-6.23100007E-08,0.382683665
 	mir = 1,1,1
@@ -5328,7 +5349,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEnginesFX
+		name = ModuleEngines
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -5395,10 +5416,10 @@ PART
 {
 	part = CA.boosterPack_4294740102
 	partName = Part
-	pos = 3.0817101,3.10450745,2.69192004
+	pos = 3.08171344,3.10450745,2.69192052
 	attPos = 0,0,0
 	attPos0 = 0.874338031,-9.56041145,0.87433058
-	rot = 0.199963868,0.373612374,-0.0828278661,0.901980042
+	rot = 0.199963838,0.373612374,-0.0828278214,0.901980042
 	attRot = 0.216439635,0,0,0.976296067
 	attRot0 = 0.082827948,-0.901979864,0.199964166,0.373612285
 	mir = 1,1,1
@@ -5428,7 +5449,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEnginesFX
+		name = ModuleEngines
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -5495,7 +5516,7 @@ PART
 {
 	part = launchClamp1_4294739860
 	partName = Part
-	pos = 1.81125033,1.28541946,3.56627345
+	pos = 1.81125128,1.28541946,3.56627536
 	attPos = 0,0,0
 	attPos0 = 1.54483189E-07,-11.3794889,2.14475775
 	rot = 1.78811774E-07,0.707106769,1.49009779E-07,0.707107008
@@ -5600,10 +5621,10 @@ PART
 {
 	part = launchClamp1_4294739734
 	partName = Part
-	pos = 5.40773773,1.35265732,2.11456847
+	pos = 5.40774345,1.35265732,2.11456847
 	attPos = 0,0,0
 	attPos0 = 1.45167434,-11.3122606,-1.45167017
-	rot = 8.94142289E-08,-0.382683426,-1.6391958E-07,0.923879743
+	rot = 8.94151952E-08,-0.382683426,-1.63920546E-07,0.923879743
 	attRot = 0,0,0,1
 	attRot0 = 9.09494377E-13,0.382683396,-2.10733944E-07,-0.923879504
 	mir = 1,1,1
@@ -5638,7 +5659,7 @@ PART
 		scaleFactor = 0.797721267
 		height = 2.01280975
 		stagingEnabled = True
-		towerRot = -8.94134899E-08,0.382683396,1.63918912E-07,0.923879564
+		towerRot = -8.94147689E-08,0.382683396,1.63920191E-07,0.923879564
 		EVENTS
 		{
 		}
@@ -5705,7 +5726,7 @@ PART
 {
 	part = launchClamp1_4294681774
 	partName = Part
-	pos = -6.17677784,1.31412888,3.56628346
+	pos = -6.17678738,1.31412888,3.56628537
 	attPos = 0,0,0
 	attPos0 = 3.51657036E-06,-11.3507786,-2.15453482
 	rot = -1.78813536E-07,-0.707106709,-8.94058658E-08,-0.707107067
@@ -5810,7 +5831,7 @@ PART
 {
 	part = launchClamp1_4294737448
 	partName = Part
-	pos = 6.11064339,1.31412888,3.56626773
+	pos = 6.11065292,1.31412888,3.56626964
 	attPos = 0,0,0
 	attPos0 = -3.27815178E-06,-11.3507824,-2.15453172
 	rot = 1.78814034E-07,-0.707106709,-8.9407628E-08,0.707107067
@@ -6028,7 +6049,7 @@ PART
 {
 	part = CA.ETnose_4294480216
 	partName = Part
-	pos = -0.0330641977,24.9759007,3.56604886
+	pos = -0.0330641977,24.9759007,3.56605077
 	attPos = 0,0,0
 	attPos0 = -4.49517645E-10,17.5,-6.25965015E-07
 	rot = -5.04485342E-13,0,-1.42108547E-13,1.00000012
@@ -6600,7 +6621,7 @@ PART
 	pos = 0.547318399,12.4469213,-1.51864946
 	attPos = 0,0,0
 	attPos0 = 0.580395699,1.29436076,-1.79777753
-	rot = -0.500000179,0.49999997,-0.500000238,0.499999762
+	rot = -0.500000179,0.499999911,-0.500000238,0.499999702
 	attRot = 0,0,-0.707106769,0.707106769
 	attRot0 = -0.50000006,0.5,-0.5,0.499999881
 	mir = 1,1,1
@@ -6869,10 +6890,10 @@ PART
 {
 	part = sensorAccelerometer_4294671236
 	partName = Part
-	pos = 0.26501897,12.7056093,-1.53583801
+	pos = 0.26501891,12.7056093,-1.53583801
 	attPos = 0,0,0
 	attPos0 = -0.258687884,0.0171883423,-0.282299429
-	rot = 1.49011328E-08,2.98023295E-08,2.98023171E-08,1.00000012
+	rot = 4.47034836E-08,0,0,1
 	attRot = 0,0,-0.99999994,0
 	attRot0 = 0.500000179,-0.49999994,0.500000179,0.499999821
 	mir = 1,1,1
@@ -6950,10 +6971,10 @@ PART
 {
 	part = sensorThermometer_4294668480
 	partName = Part
-	pos = 0.282710373,12.3798218,-1.53583777
+	pos = 0.282710254,12.3798218,-1.53583777
 	attPos = 0,0,0
 	attPos0 = 0.0670995489,0.0171883646,-0.264607996
-	rot = 5.96046306E-08,-5.96046164E-08,1.00000012,8.94069814E-08
+	rot = 8.9406953E-08,-2.98023224E-08,1,8.94069814E-08
 	attRot = 0,0,0,1
 	attRot0 = -0.49999994,-0.500000179,0.499999821,-0.500000179
 	mir = 1,1,1
@@ -7034,7 +7055,7 @@ PART
 	pos = 0.471134305,12.7125511,-1.53583801
 	attPos = 0,0,0
 	attPos0 = -0.265629679,0.0171884019,-0.0761840865
-	rot = 5.96046306E-08,-5.96046164E-08,1.00000012,8.94069814E-08
+	rot = 8.9406953E-08,-2.98023224E-08,1,8.94069814E-08
 	attRot = 0,0,0,1
 	attRot0 = -0.49999994,-0.500000179,0.499999821,-0.500000179
 	mir = 1,1,1
@@ -7198,10 +7219,10 @@ PART
 {
 	part = SurfaceScanner_4294659712
 	partName = Part
-	pos = 0.784669161,12.4809961,-1.63583803
+	pos = 0.78466934,12.4809961,-1.63583827
 	attPos = 0,0,0
 	attPos0 = -0.0340749137,0.117188409,0.237350702
-	rot = 5.96046306E-08,-5.96046164E-08,1.00000012,8.94069814E-08
+	rot = 8.9406953E-08,-2.98023224E-08,1,8.94069814E-08
 	attRot = 0,0,0,0.999999881
 	attRot0 = -0.49999994,-0.500000179,0.499999821,-0.500000179
 	mir = 1,1,1
@@ -7455,7 +7476,7 @@ PART
 {
 	part = stackDecouplerMini_4294638600
 	partName = Part
-	pos = 1.038715,14.1970596,-1.20216537
+	pos = 1.038715,14.1970596,-1.2021656
 	attPos = 1.84248006E-06,0.0296306089,0.332117409
 	attPos0 = 4.61428044E-07,-0.10341078,-2.15730687E-08
 	rot = -0.49999997,0.50000006,-0.500000298,0.499999911
@@ -7556,7 +7577,7 @@ PART
 {
 	part = probeCoreCube_4294617504
 	partName = Part
-	pos = 1.03871405,14.1970596,-1.56267452
+	pos = 1.03871405,14.1970596,-1.56267524
 	attPos = 0,0,0
 	attPos0 = -1.49213853E-13,0.360507697,-9.5367426E-07
 	rot = -0.49999997,0.50000006,-0.500000298,0.499999911
@@ -7672,22 +7693,6 @@ PART
 	}
 	MODULE
 	{
-		name = FSmeshSwitch
-		isEnabled = True
-		selectedObject = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleTripLogger
 		isEnabled = True
 		stagingEnabled = True
@@ -7721,7 +7726,7 @@ PART
 {
 	part = solarPanels5_4294609852
 	partName = Part
-	pos = 1.0387131,14.3640881,-1.56023717
+	pos = 1.0387131,14.3640881,-1.56023812
 	attPos = 0.0781501234,-2.98023224E-08,1.49011612E-08
 	attPos0 = -0.245178595,-0.00243759505,-9.9837689E-07
 	rot = 0.707106948,-3.16101385E-08,1.36977263E-07,-0.707106829
@@ -7795,7 +7800,7 @@ PART
 {
 	part = solarPanels5_4294609638
 	partName = Part
-	pos = 1.20574212,14.1970596,-1.56023705
+	pos = 1.20574236,14.1970596,-1.56023777
 	attPos = 1.02905901E-07,0,-0.078150332
 	attPos0 = 3.62468562E-08,-0.00243759505,0.245177805
 	rot = 0.499999911,-0.500000119,0.500000358,-0.499999911
@@ -7869,10 +7874,10 @@ PART
 {
 	part = solarPanels5_4294609606
 	partName = Part
-	pos = 1.0387131,14.0300312,-1.56023693
+	pos = 1.0387131,14.0300312,-1.56023741
 	attPos = -0.0781501383,2.98023224E-08,-1.49011612E-08
 	attPos0 = 0.24517861,-0.00243759505,-9.23871255E-07
-	rot = -1.36977278E-07,-0.707106829,0.707106948,3.16101243E-08
+	rot = -1.36977278E-07,-0.707106829,0.707106948,3.16101278E-08
 	attRot = 0,0,0,1
 	attRot0 = 8.36150099E-15,0.707106948,-1.25607373E-15,0.707106709
 	mir = 1,1,1
@@ -7943,7 +7948,7 @@ PART
 {
 	part = solarPanels5_4294609574
 	partName = Part
-	pos = 0.871685028,14.1970596,-1.56023705
+	pos = 0.87168479,14.1970596,-1.56023777
 	attPos = -4.33010285E-08,0,0.0781512856
 	attPos0 = -3.62473855E-08,-0.00243759505,-0.245179817
 	rot = 0.500000298,0.49999997,-0.49999997,-0.50000006
@@ -8017,7 +8022,7 @@ PART
 {
 	part = longAntenna_4294602992
 	partName = Part
-	pos = 0.881375015,14.0407848,-1.57338047
+	pos = 0.881374776,14.0407848,-1.57338095
 	attPos = 0.0136561245,-0.277229369,-0.00681881607
 	attPos0 = 0.142617702,0.287935346,-0.150519893
 	rot = -0.49999997,0.50000006,-0.500000298,0.499999911
@@ -8103,7 +8108,7 @@ PART
 {
 	part = sensorGravimeter_4294580696
 	partName = Part
-	pos = 1.06659484,14.3157501,-1.82904458
+	pos = 1.06659484,14.3157501,-1.82904577
 	attPos = -0.00871484727,-0.0215663612,-0.0477605239
 	attPos0 = -0.109976031,0.287935346,0.0756411925
 	rot = -0.500000298,-0.49999994,0.5,0.50000006
@@ -8184,7 +8189,7 @@ PART
 {
 	part = sensorThermometer_4294574256
 	partName = Part
-	pos = 1.09189093,14.0471954,-1.82302403
+	pos = 1.09189117,14.0471954,-1.82302475
 	attPos = -0.00337941945,-0.0275859833,-0.00469779968
 	attPos0 = 0.153243542,0.287935287,0.0578742735
 	rot = 1.49011612E-07,0,-0.707106769,-0.707107067
@@ -8366,7 +8371,7 @@ PART
 {
 	part = probeCoreCube_4294573888
 	partName = Part
-	pos = 1.03871679,13.5432606,-1.56169748
+	pos = 1.03871679,13.5432606,-1.56169796
 	attPos = 0,0,0
 	attPos0 = -1.49213853E-13,0.360507697,-9.5367426E-07
 	rot = -0.500000298,-0.499999911,0.49999997,0.50000006
@@ -8482,22 +8487,6 @@ PART
 	}
 	MODULE
 	{
-		name = FSmeshSwitch
-		isEnabled = True
-		selectedObject = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleTripLogger
 		isEnabled = True
 		stagingEnabled = True
@@ -8531,10 +8520,10 @@ PART
 {
 	part = solarPanels5_4294573824
 	partName = Part
-	pos = 1.03871775,13.3762321,-1.55925941
+	pos = 1.03871775,13.3762321,-1.55925965
 	attPos = 0.0781501234,-2.98023224E-08,1.49011612E-08
 	attPos0 = -0.245178595,-0.00243759505,-9.9837689E-07
-	rot = 1.23631025E-07,0.707106709,-0.707106948,-2.80952861E-09
+	rot = 1.44704472E-07,0.707106769,-0.707107008,-2.38829401E-08
 	attRot = 0,0,0,1
 	attRot0 = -1.25607395E-15,-0.707106829,-1.25607395E-15,0.707106829
 	mir = 1,1,1
@@ -8605,10 +8594,10 @@ PART
 {
 	part = solarPanels5_4294573792
 	partName = Part
-	pos = 0.871688843,13.5432606,-1.55925965
+	pos = 0.871688604,13.5432606,-1.55926013
 	attPos = 1.02905901E-07,0,-0.078150332
 	attPos0 = 3.62468562E-08,-0.00243759505,0.245177805
-	rot = 0.500000298,0.499999881,-0.49999994,-0.50000006
+	rot = 0.500000358,0.499999881,-0.49999994,-0.500000119
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
@@ -8679,10 +8668,10 @@ PART
 {
 	part = solarPanels5_4294573760
 	partName = Part
-	pos = 1.03871775,13.710289,-1.55926001
+	pos = 1.03871775,13.710289,-1.55926049
 	attPos = -0.0781501383,2.98023224E-08,-1.49011612E-08
 	attPos0 = 0.24517861,-0.00243759505,-9.23871255E-07
-	rot = 0.707106948,-2.80954282E-09,1.23631011E-07,-0.707106709
+	rot = 0.707107008,-2.38829685E-08,1.44704444E-07,-0.707106769
 	attRot = 0,0,0,1
 	attRot0 = 8.36150099E-15,0.707106948,-1.25607373E-15,0.707106709
 	mir = 1,1,1
@@ -8753,7 +8742,7 @@ PART
 {
 	part = solarPanels5_4294573728
 	partName = Part
-	pos = 1.20574594,13.5432606,-1.55925989
+	pos = 1.20574617,13.5432606,-1.55926037
 	attPos = -4.33010285E-08,0,0.0781512856
 	attPos0 = -3.62473855E-08,-0.00243759505,-0.245179817
 	rot = -0.49999997,0.50000006,-0.500000298,0.499999911
@@ -8827,7 +8816,7 @@ PART
 {
 	part = longAntenna_4294573696
 	partName = Part
-	pos = 1.19605637,13.6995344,-1.57240367
+	pos = 1.1960566,13.6995344,-1.57240415
 	attPos = 0.0136561245,-0.277229369,-0.00681881607
 	attPos0 = 0.142617702,0.287935346,-0.150519893
 	rot = -0.500000298,-0.499999911,0.49999997,0.50000006
@@ -8913,10 +8902,10 @@ PART
 {
 	part = sensorThermometer_4294573598
 	partName = Part
-	pos = 0.98554033,13.6931248,-1.82204771
+	pos = 0.98554033,13.6931248,-1.82204866
 	attPos = -0.00337941945,-0.0275859833,-0.00469779968
 	attPos0 = 0.153243542,0.287935287,0.0578742735
-	rot = 0,0,-0.707107067,0.707106769
+	rot = -2.98023224E-08,1.49011612E-07,-0.707107067,0.707106709
 	attRot = 0,0,0,1
 	attRot0 = 1.25607384E-15,0.707106769,-0.707106709,-4.90679177E-08
 	mir = 1,1,1
@@ -8994,10 +8983,10 @@ PART
 {
 	part = sensorAccelerometer_4294571082
 	partName = Part
-	pos = 0.925431609,13.3787947,-1.84963298
+	pos = 0.925431371,13.3787947,-1.84963346
 	attPos = 0,0,0
 	attPos0 = -0.164465845,0.287935346,0.113284647
-	rot = -1.68587448E-07,-0.707106769,0.707106888,-4.2146894E-08
+	rot = -1.89660881E-07,-0.707106829,0.707106948,-2.10734825E-08
 	attRot = 0.49999994,0.49999994,-0.49999994,-0.49999994
 	attRot0 = -1.03559323E-07,-0.707106829,-1.36464937E-08,0.707106829
 	mir = 1,1,1
@@ -9163,5 +9152,357 @@ PART
 		hideFlow = False
 		isVisible = True
 		flowMode = Both
+	}
+}
+PART
+{
+	part = CA.decalFlag_4294715996
+	partName = Part
+	pos = 2.72227788,8.98978901,-0.0900526047
+	attPos = 0,0,0
+	attPos0 = -1.14669132,-0.955034077,0.252492547
+	rot = 0.0113495523,-0.0347814001,-0.000395249197,-0.999330461
+	attRot = 0,0,0,1
+	attRot0 = -0.000100421312,0.999896467,0.0113564301,0.00884176418
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	srfN = srfAttach,CADelta_4294492178
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = FSmeshSwitch
+		isEnabled = True
+		selectedObject = 3
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTripLogger
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		Log
+		{
+			flight = 0
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = CA.decalName_4294712750
+	partName = Part
+	pos = -1.65687823,17.6596794,-1.47442603
+	attPos = 0,0,0
+	attPos0 = -1.62380087,4.47539234,-0.340033531
+	rot = 0,0.707106829,0,0.707106829
+	attRot = 0,0,0,1
+	attRot0 = 0,0.707106829,0,0.707106829
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	srfN = srfAttach,mk3CargoBayL_4294355238
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = FSmeshSwitch
+		isEnabled = True
+		selectedObject = 3
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTripLogger
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		Log
+		{
+			flight = 0
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = CA.decalName_4294710816
+	partName = Part
+	pos = 1.59072363,17.6756058,-1.46970034
+	attPos = 0,0,0
+	attPos0 = 1.62380099,4.4913187,-0.335307837
+	rot = -0.707106829,0,0.707106829,0
+	attRot = 0,0,-0.99999994,0
+	attRot0 = -0.707106829,0,0.707106829,0
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	srfN = srfAttach,mk3CargoBayL_4294355238
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = FSmeshSwitch
+		isEnabled = True
+		selectedObject = 3
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTripLogger
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		Log
+		{
+			flight = 0
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = CA.decalSide_4294651970
+	partName = Part
+	pos = -1.65959156,11.3195896,-0.64263165
+	attPos = 0,0,0.491760731
+	attPos0 = -1.6265142,-1.86469746,1.1920929E-07
+	rot = 0,0.707106829,0,0.707106829
+	attRot = 0,0,0,1
+	attRot0 = 0,0.707106829,0,0.707106829
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = CA.decalSide_4294651672
+	srfN = srfAttach,mk3CargoBayL_4294355238
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = FSmeshSwitch
+		isEnabled = True
+		selectedObject = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTripLogger
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		Log
+		{
+			flight = 0
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = CA.decalSide_4294651672
+	partName = Part
+	pos = 1.59343684,11.3195896,-0.64263165
+	attPos = 0,0,0.491760731
+	attPos0 = 1.6265142,-1.86469746,1.1920929E-07
+	rot = 0,-0.707106829,0,0.707106709
+	attRot = 0,0,0,1
+	attRot0 = 0,-0.707106829,0,0.707106709
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = CA.decalSide_4294651970
+	srfN = srfAttach,mk3CargoBayL_4294355238
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = FSmeshSwitch
+		isEnabled = True
+		selectedObject = 1
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTripLogger
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		Log
+		{
+			flight = 0
+		}
+		UPGRADESAPPLIED
+		{
+		}
 	}
 }
