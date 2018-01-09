@@ -2,7 +2,7 @@ ship = CA - Mk3 Block II Shuttle
 version = 1.3.0
 description = Max Payload - 30t¨¨Action Groups;¨2 - Toggle Fuel Cells¨3 - Toggle OMS Engines¨4 - Toggle ME Yaw/Roll Gimbal¨5 - Toggle ME¨7 - Toggle Cargo Bay Doors¨8 - Toggle Cockpit Landing Skids¨9 - Deploy Airbrake¨0 - Deploy Body Flap
 type = VAB
-size = 14.805809,44.5667,12.9246178
+size = 14.805809,44.5666313,12.9245987
 PART
 {
 	part = B2.cockpit_4294699224
@@ -27,14 +27,14 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	link = B2.landingSkid_4293462442
-	link = B2.landingSkid_4294696888
 	link = B2.canard_4293914906
 	link = B2.canard_4294693270
 	link = B2.LESengine_4294693656
 	link = B2.LESengine_4294691496
 	link = B2.LESengine_4294691080
 	link = B2.LESengine_4294690450
+	link = B2.landingSkid_4294661648
+	link = B2.landingSkid_4294661014
 	link = B2.LESdecoupler_4294677042
 	attN = bottom,B2.LESdecoupler_4294677042
 	EVENTS
@@ -218,9 +218,9 @@ PART
 		name = ModuleAnimateGeneric
 		isEnabled = True
 		aniState = LOCKED
-		animSwitch = True
-		animTime = 0
-		animSpeed = 1
+		animSwitch = False
+		animTime = 1
+		animSpeed = 20
 		deployPercent = 100
 		animationIsDisabled = False
 		stagingEnabled = True
@@ -345,128 +345,6 @@ PART
 		hideFlow = False
 		isVisible = True
 		flowMode = Both
-	}
-}
-PART
-{
-	part = B2.landingSkid_4293462442
-	partName = Part
-	pos = -0.705268145,21.3828182,1.10332143
-	attPos = 0,0,0.0334851742
-	attPos0 = -1.00148022,-0.600074768,1.26825047
-	rot = 2.12583109E-05,0.707106173,2.12583509E-05,0.707107484
-	attRot = 0,0,0,1
-	attRot0 = 2.12583109E-05,0.707106173,2.12583509E-05,0.707107484
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = B2.landingSkid_4294696888
-	srfN = srfAttach,B2.cockpit_4294699224
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleAnimateGeneric
-		isEnabled = True
-		aniState = LOCKED
-		animSwitch = False
-		animTime = 1
-		animSpeed = 20
-		deployPercent = 100
-		animationIsDisabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = Custom08
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = B2.landingSkid_4294696888
-	partName = Part
-	pos = 1.2976923,21.3828182,1.10332143
-	attPos = 0,0,0.0334851742
-	attPos0 = 1.00148022,-0.600074768,1.26825047
-	rot = 2.12583564E-05,0.707107425,2.12583072E-05,0.707106173
-	attRot = 0,0,0,1
-	attRot0 = 2.12583564E-05,0.707107425,2.12583072E-05,0.707106173
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = B2.landingSkid_4293462442
-	srfN = srfAttach,B2.cockpit_4294699224
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleAnimateGeneric
-		isEnabled = True
-		aniState = LOCKED
-		animSwitch = False
-		animTime = 1
-		animSpeed = 20
-		deployPercent = 100
-		animationIsDisabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = Custom08
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
 	}
 }
 PART
@@ -1191,16 +1069,282 @@ PART
 }
 PART
 {
+	part = elevon25_4294700936
+	partName = Part
+	pos = -2.22483349,21.0315571,0.486939907
+	attPos = -0.0753593445,0,-9.406358E-08
+	attPos0 = -0.84172678,-1.07170868,1.00350007E-07
+	rot = -1.39574149E-06,-0.0871564448,-5.65960022E-07,0.99619472
+	attRot = -0.54167515,-0.54167515,-0.454519451,0.454519451
+	attRot0 = 1.43834268E-06,7.59959107E-07,4.41660632E-07,-1
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = elevon25_4294410596
+	srfN = srfAttach,B2.canard_4293914906
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = SyncModuleControlSurface
+		isEnabled = True
+		mirrorDeploy = True
+		usesMirrorDeploy = True
+		ignorePitch = False
+		ignoreYaw = False
+		ignoreRoll = False
+		deploy = False
+		deployInvert = False
+		partDeployInvert = False
+		authorityLimiter = 100
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActionToggle
+			{
+				actionGroup = None
+			}
+			ActionExtend
+			{
+				actionGroup = None
+			}
+			ActionRetract
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = elevon25_4294410596
+	partName = Part
+	pos = 2.81725931,21.0315571,0.486939728
+	attPos = -0.0753592849,0,5.96046377E-08
+	attPos0 = -0.841726601,-1.07170868,-1.49011584E-07
+	rot = -5.65960249E-07,0.996194661,-1.39574172E-06,-0.0871564448
+	attRot = -0.54167515,-0.54167515,-0.454519451,0.454519451
+	attRot0 = 1.43834302E-06,7.37607479E-07,-4.41660575E-07,1
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = elevon25_4294700936
+	srfN = srfAttach,B2.canard_4294693270
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = SyncModuleControlSurface
+		isEnabled = True
+		mirrorDeploy = False
+		usesMirrorDeploy = True
+		ignorePitch = False
+		ignoreYaw = False
+		ignoreRoll = False
+		deploy = False
+		deployInvert = False
+		partDeployInvert = False
+		authorityLimiter = 100
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActionToggle
+			{
+				actionGroup = None
+			}
+			ActionExtend
+			{
+				actionGroup = None
+			}
+			ActionRetract
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = B2.landingSkid_4294661648
+	partName = Part
+	pos = -0.601037741,21.9962826,1.11690056
+	attPos = -0.0294295549,-0.045337677,0.0470250845
+	attPos0 = -0.867820263,0.0587272644,1.26828969
+	rot = 2.12583236E-05,0.707106173,2.12583618E-05,0.707107484
+	attRot = 0,0,0,1
+	attRot0 = 2.12583236E-05,0.707106173,2.12583618E-05,0.707107484
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = B2.landingSkid_4294661014
+	srfN = srfAttach,B2.cockpit_4294699224
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnimateGeneric
+		isEnabled = True
+		aniState = LOCKED
+		animSwitch = False
+		animTime = 1
+		animSpeed = 20
+		deployPercent = 100
+		animationIsDisabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = Custom08
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = B2.landingSkid_4294661014
+	partName = Part
+	pos = 1.19346189,21.9962826,1.11690056
+	attPos = 0.0294295549,-0.045337677,0.0470250845
+	attPos0 = 0.867820263,0.0587272644,1.26828969
+	rot = 2.12583655E-05,0.707107425,2.12583218E-05,0.707106173
+	attRot = 0,0,0,1
+	attRot0 = 2.12583655E-05,0.707107425,2.12583218E-05,0.707106173
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = B2.landingSkid_4294661648
+	srfN = srfAttach,B2.cockpit_4294699224
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnimateGeneric
+		isEnabled = True
+		aniState = LOCKED
+		animSwitch = False
+		animTime = 1
+		animSpeed = 20
+		deployPercent = 100
+		animationIsDisabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = Custom08
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
 	part = B2.LESdecoupler_4294677042
 	partName = Part
-	pos = 0.296212077,20.1678925,0.131585807
+	pos = 0.296212077,20.1678925,0.121585786
 	attPos = 0,-0.249662399,0
-	attPos0 = 0,-1.81500053,0.330000013
+	attPos0 = 0,-1.81500053,0.319999993
 	rot = 0,0,0,1
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
-	symMethod = Radial
+	symMethod = Mirror
 	autostrutMode = Heaviest
 	rigidAttachment = False
 	istg = 0
@@ -1326,14 +1470,14 @@ PART
 {
 	part = GearSmall_4294699984
 	partName = Part
-	pos = 0.296212077,22.521059,1.45906389
+	pos = 0.296212077,22.521059,1.4490639
 	attPos = 0,-0.483438492,-0.247861743
 	attPos0 = 0,2.83660507,1.57533991
 	rot = -0.719115973,1.13212025E-07,1.17158912E-07,0.694890201
 	attRot = 0.0577610657,2.17218338E-15,-7.92309875E-15,0.998330593
 	attRot0 = -0.719115973,1.13212025E-07,1.17158912E-07,0.694890201
 	mir = 1,1,1
-	symMethod = Radial
+	symMethod = Mirror
 	autostrutMode = ForceHeaviest
 	rigidAttachment = False
 	istg = 0
@@ -1620,14 +1764,14 @@ PART
 {
 	part = mk3CargoBayL_4294699736
 	partName = Part
-	pos = 0.296212077,15.1678925,0.131585807
+	pos = 0.296212077,15.1678925,0.121585786
 	attPos = 0,0,0
 	attPos0 = 0,-5,0
 	rot = 0,0,0,1
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
-	symMethod = Radial
+	symMethod = Mirror
 	autostrutMode = Off
 	rigidAttachment = False
 	istg = 0
@@ -1731,7 +1875,7 @@ PART
 {
 	part = ShuttleBottomLong_4294699552
 	partName = Part
-	pos = 0.296212077,10.1678867,0.639509916
+	pos = 0.296212077,10.1678867,0.629509866
 	attPos = 0,-3.33786011E-06,-0.00707572699
 	attPos0 = 0,-5.00000238,0.514999866
 	rot = 0,0,0,1
@@ -1872,14 +2016,14 @@ PART
 {
 	part = CA.STME_4294699434
 	partName = Part
-	pos = 1.04621208,7.1894331,0.773822546
+	pos = 1.04621208,7.1894331,0.763822496
 	attPos = 0,0,0
 	attPos0 = 0.75,-2.97845197,0.134311646
 	rot = 0.0985375345,0,0,0.9951334
 	attRot = 0,0,0,1
 	attRot0 = 0.0985375941,0,0,0.9951334
 	mir = 1,1,1
-	symMethod = Mirror
+	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
 	istg = 6
@@ -2018,14 +2162,14 @@ PART
 {
 	part = CA.STME_4294699352
 	partName = Part
-	pos = -0.453787923,7.1894331,0.773822546
+	pos = -0.453787923,7.1894331,0.763822496
 	attPos = 0,0,0
 	attPos0 = -0.75,-2.97845197,0.134311646
 	rot = 0.0985375345,0,0,0.9951334
 	attRot = 0,0,0,1
 	attRot0 = 0.0985375345,0,0,0.9951334
 	mir = 1,1,1
-	symMethod = Mirror
+	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
 	istg = 6
@@ -2164,7 +2308,7 @@ PART
 {
 	part = CA.STME_4294699270
 	partName = Part
-	pos = 0.296212077,7.40943432,-0.476178437
+	pos = 0.296212077,7.40943432,-0.486178458
 	attPos = 0,0,0
 	attPos0 = 0,-2.75845051,-1.11568916
 	rot = 0.0985375345,0,0,0.9951334
@@ -2309,7 +2453,7 @@ PART
 {
 	part = BodyFlap_4294699188
 	partName = Part
-	pos = 0.296212077,7.16730404,1.77871394
+	pos = 0.296212077,7.16730404,1.76871383
 	attPos = 0,-5.7220459E-06,0.0233688354
 	attPos0 = 0,-3.00057578,1.11583412
 	rot = 0.00703153014,8.16457832E-05,-5.74094884E-07,0.999975324
@@ -2399,7 +2543,7 @@ PART
 {
 	part = ShuttleOMSDUO_4294699158
 	partName = Part
-	pos = 0.296212256,8.45106792,-1.50096178
+	pos = 0.296212256,8.45106792,-1.51096189
 	attPos = 0,0,0
 	attPos0 = 1.76877336E-07,-1.71681714,-2.14047194
 	rot = 3.27825518E-07,6.4208983E-08,3.19744197E-14,-1
@@ -2546,14 +2690,14 @@ PART
 {
 	part = OMSEngine_4294699014
 	partName = Part
-	pos = 1.42621219,7.40106297,-1.53096056
+	pos = 1.42621219,7.40106297,-1.54096067
 	attPos = 0,0,0
 	attPos0 = 1.13,-1.05000377,-0.0300008059
 	rot = 0,0,-1.69406589E-21,1
 	attRot = 0,0,0,1
 	attRot0 = -3.27825518E-07,-6.4208983E-08,-3.19744197E-14,-1
 	mir = 1,1,1
-	symMethod = Mirror
+	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
 	istg = 2
@@ -2677,14 +2821,14 @@ PART
 {
 	part = OMSEngine_4294698940
 	partName = Part
-	pos = -0.833787799,7.40106297,-1.53096056
+	pos = -0.833787799,7.40106297,-1.54096067
 	attPos = 0,0,0
 	attPos0 = -1.13,-1.05000472,-0.0300005153
 	rot = 8.94069672E-08,0,-1.69406589E-21,1
 	attRot = 0,0,0,1
 	attRot0 = -4.17232485E-07,-6.4208983E-08,-2.62336895E-14,-1
 	mir = 1,1,1
-	symMethod = Mirror
+	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
 	istg = 2
@@ -2808,14 +2952,14 @@ PART
 {
 	part = GearSmall_4294698866
 	partName = Part
-	pos = -1.64778864,14.2672062,1.49003434
+	pos = -1.64778864,14.2672062,1.48003423
 	attPos = -0.560801864,1.10416222,-0.364476323
 	attPos0 = -1.38319898,2.99515724,1.21500063
 	rot = 0.701708317,3.70328056E-15,7.33345625E-15,-0.712464333
 	attRot = -0.00760561088,-2.56692191E-15,7.80415246E-15,-0.999971271
 	attRot0 = 0.701708317,3.70328056E-15,7.33345625E-15,-0.712464333
 	mir = 1,1,1
-	symMethod = Mirror
+	symMethod = Radial
 	autostrutMode = ForceHeaviest
 	rigidAttachment = False
 	istg = 0
@@ -3103,14 +3247,14 @@ PART
 {
 	part = GearSmall_4294698618
 	partName = Part
-	pos = 2.24021292,14.2672062,1.49003434
+	pos = 2.24021292,14.2672062,1.48003423
 	attPos = 0.560801864,1.10416222,-0.364476323
 	attPos0 = 1.38319898,2.99515724,1.21500063
 	rot = -0.701708317,3.70328014E-15,7.3334554E-15,0.712464333
 	attRot = -0.00760561088,-2.56692191E-15,7.80415246E-15,-0.999971271
 	attRot0 = -0.665082932,4.06651074E-15,7.13844301E-15,0.746769488
 	mir = 1,1,1
-	symMethod = Mirror
+	symMethod = Radial
 	autostrutMode = ForceHeaviest
 	rigidAttachment = False
 	istg = 0
@@ -3398,7 +3542,7 @@ PART
 {
 	part = CA.drogue_4294698370
 	partName = Part
-	pos = 0.296211898,7.58477688,-1.44093394
+	pos = 0.296211898,7.58477688,-1.45093405
 	attPos = 0,0,0
 	attPos0 = -1.78813934E-07,-2.58310986,-2.08044362
 	rot = -2.04223375E-06,0.0766877979,-0.997055233,-1.57077025E-07
@@ -3511,14 +3655,14 @@ PART
 {
 	part = B2.delta_4294698314
 	partName = Part
-	pos = -1.30378795,12.7950115,1.53158724
+	pos = -1.30378795,12.7950115,1.52158725
 	attPos = 0.0241425037,-0.378688335,1.39999926
 	attPos0 = -1.62414253,-1.99419117,0
 	rot = -5.96046448E-08,0.0436193198,4.28408384E-08,-0.999048293
 	attRot = -1.35668199E-09,0.04361929,8.6043217E-09,-0.999048293
 	attRot0 = -5.96046448E-08,0.0436193198,4.09781933E-08,-0.999048293
 	mir = 1,1,1
-	symMethod = Mirror
+	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
 	istg = 0
@@ -3608,14 +3752,14 @@ PART
 {
 	part = CA.Elevon2_4294698256
 	partName = Part
-	pos = -2.84374666,9.84074116,1.39685881
+	pos = -2.84374666,9.84074116,1.38685882
 	attPos = 0,0,0
 	attPos0 = -1.54584098,-2.95427012,-5.09359495E-07
 	rot = 1.30385143E-08,0.999048293,0,0.0436192825
 	attRot = -0.49999994,-0.49999994,0.49999994,-0.49999994
 	attRot0 = 2.98023224E-08,-1,5.96046448E-08,2.98023224E-08
 	mir = 1,1,1
-	symMethod = Mirror
+	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
 	istg = 0
@@ -3696,14 +3840,14 @@ PART
 {
 	part = CA.Elevon1_4294698208
 	partName = Part
-	pos = -5.34098768,9.84074306,1.17837775
+	pos = -5.34098768,9.84074306,1.16837776
 	attPos = 0,0,0
 	attPos0 = -4.05262232,-2.95426941,-3.5994367E-07
 	rot = 1.30385143E-08,0.999048293,0,0.0436192825
 	attRot = -0.49999994,-0.49999994,0.49999994,-0.49999994
 	attRot0 = 2.98023224E-08,-1,5.96046448E-08,2.98023224E-08
 	mir = 1,1,1
-	symMethod = Mirror
+	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
 	istg = 0
@@ -3784,14 +3928,14 @@ PART
 {
 	part = B2.Rudder_4294698160
 	partName = Part
-	pos = -6.54934931,10.1523914,1.02943552
+	pos = -6.54934931,10.1523914,1.01943552
 	attPos = 0,0,0
 	attPos0 = -5.26936626,-2.64262056,-0.0430607721
-	rot = 0.0101068597,0.633144498,-0.00726613915,-0.773933589
+	rot = 0.0101068616,0.633144498,-0.00726613868,-0.773933589
 	attRot = 7.60436603E-09,0.130526185,2.32793518E-08,0.991444945
 	attRot0 = -0.00978025235,-0.598783433,0.00770014618,0.800814271
 	mir = 1,1,1
-	symMethod = Mirror
+	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
 	istg = 0
@@ -3856,14 +4000,14 @@ PART
 {
 	part = B2.delta_4294698106
 	partName = Part
-	pos = 1.8962121,12.7950077,1.53158724
+	pos = 1.8962121,12.7950077,1.52158725
 	attPos = -0.0241425037,-0.378691196,1.39999926
 	attPos0 = 1.62414253,-1.99419117,0
 	rot = -5.0291419E-08,0.999048293,2.38418579E-07,-0.0436193496
 	attRot = -1.35668199E-09,0.04361929,8.6043217E-09,-0.999048293
 	attRot0 = -2.98023224E-08,1,0,-7.35137107E-08
 	mir = 1,1,1
-	symMethod = Mirror
+	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
 	istg = 0
@@ -3954,14 +4098,14 @@ PART
 {
 	part = CA.Elevon2_4294698048
 	partName = Part
-	pos = 3.43623877,9.84073925,1.39685583
+	pos = 3.43623924,9.84073925,1.38685572
 	attPos = 0,0,0
 	attPos0 = -1.54583991,-2.95426726,-3.30134412E-07
 	rot = -5.06641356E-07,-0.0436193198,-1.8625208E-09,-0.999048293
 	attRot = -0.49999994,-0.49999994,0.49999994,-0.49999994
 	attRot0 = -2.98023259E-08,1,-1.3027012E-15,2.98023224E-08
 	mir = 1,1,1
-	symMethod = Mirror
+	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
 	istg = 0
@@ -3989,7 +4133,7 @@ PART
 	{
 		name = SyncModuleControlSurface
 		isEnabled = True
-		mirrorDeploy = True
+		mirrorDeploy = False
 		usesMirrorDeploy = True
 		ignorePitch = True
 		ignoreYaw = True
@@ -4042,14 +4186,14 @@ PART
 {
 	part = CA.Elevon1_4294698000
 	partName = Part
-	pos = 5.9336071,9.84073925,1.17835844
+	pos = 5.93360901,9.84073925,1.16835821
 	attPos = 0,0,0
 	attPos0 = -4.05261946,-2.95426655,-6.98700035E-07
 	rot = -5.06641356E-07,-0.0436193198,-1.8625208E-09,-0.999048293
 	attRot = -0.49999994,-0.49999994,0.49999994,-0.49999994
 	attRot0 = -2.98023259E-08,1,-1.3027012E-15,2.98023224E-08
 	mir = 1,1,1
-	symMethod = Mirror
+	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
 	istg = 0
@@ -4077,7 +4221,7 @@ PART
 	{
 		name = SyncModuleControlSurface
 		isEnabled = True
-		mirrorDeploy = True
+		mirrorDeploy = False
 		usesMirrorDeploy = True
 		ignorePitch = True
 		ignoreYaw = True
@@ -4130,14 +4274,14 @@ PART
 {
 	part = B2.Rudder_4294697952
 	partName = Part
-	pos = 7.14190578,10.1523905,1.0294205
+	pos = 7.14190817,10.1523905,1.01942015
 	attPos = 0,0,0
 	attPos0 = -5.26936293,-2.64261794,0.0430596694
-	rot = 0.00726615358,0.773932934,-0.0101068122,-0.633145213
+	rot = 0.00726615405,0.773932934,-0.0101068132,-0.633145213
 	attRot = 7.60436603E-09,0.130526185,2.32793518E-08,0.991444945
 	attRot0 = 0.00869161822,0.698188066,0.00891096424,0.715806246
 	mir = 1,1,1
-	symMethod = Mirror
+	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
 	istg = 0
@@ -4165,7 +4309,7 @@ PART
 	{
 		name = SyncModuleControlSurface
 		isEnabled = True
-		mirrorDeploy = True
+		mirrorDeploy = False
 		usesMirrorDeploy = True
 		ignorePitch = True
 		ignoreYaw = True
@@ -4202,10 +4346,10 @@ PART
 {
 	part = CA.decalFlag_4294697898
 	partName = Part
-	pos = 3.1335206,11.0887651,1.19247591
+	pos = 3.13352156,11.0887651,1.18247569
 	attPos = -0.000181674957,0,0.00206917524
 	attPos0 = -1.26192749,-1.7062428,0.227904856
-	rot = 0.00193712488,-0.0381031334,-7.39220923E-05,-0.999271989
+	rot = 0.00193712523,-0.0381031334,-7.39220995E-05,-0.999271989
 	attRot = 0,0,0,1
 	attRot0 = -1.07033547E-05,0.999982893,0.00193872745,0.00552072329
 	mir = 1,1,1
@@ -4272,14 +4416,14 @@ PART
 {
 	part = CAStrake_4294697738
 	partName = Part
-	pos = -1.30378795,16.3427372,1.55733979
+	pos = -1.30378795,16.3427372,1.5473398
 	attPos = 0.0250190496,0.494920492,1.42575276
 	attPos0 = -1.62501907,0.679923534,0
 	rot = -5.96046448E-08,0.0436193198,4.28408384E-08,-0.999048293
 	attRot = -1.35668199E-09,0.04361929,8.6043217E-09,-0.999048293
 	attRot0 = -5.96046448E-08,0.0436193198,4.09781933E-08,-0.999048293
 	mir = 1,1,1
-	symMethod = Mirror
+	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
 	istg = 0
@@ -4350,14 +4494,14 @@ PART
 {
 	part = CAStrake_4294697694
 	partName = Part
-	pos = 1.8962121,16.3427372,1.55733979
+	pos = 1.8962121,16.3427372,1.5473398
 	attPos = -0.0250190496,0.494919538,1.42575276
 	attPos0 = 1.62501907,0.679923534,0
 	rot = -5.0291419E-08,0.999048293,2.38418579E-07,-0.0436193496
 	attRot = -1.35668199E-09,0.04361929,8.6043217E-09,-0.999048293
 	attRot0 = -2.98023224E-08,1,0,-7.35137107E-08
 	mir = 1,1,1
-	symMethod = Mirror
+	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
 	istg = 0
@@ -4428,7 +4572,7 @@ PART
 {
 	part = ETdecoupler5m_4294697650
 	partName = Part
-	pos = 0.296212077,10.8963509,2.0048852
+	pos = 0.296212077,10.8963509,1.99488533
 	attPos = 0,0,0
 	attPos0 = 0,-4.27153826,1.87329698
 	rot = -5.96046448E-08,-0.707106829,-5.96046448E-08,-0.707106829
@@ -4485,7 +4629,7 @@ PART
 {
 	part = CA.ET_4294697584
 	partName = Part
-	pos = 0.296212554,9.58090687,4.83034086
+	pos = 0.296212554,9.58090687,4.82034159
 	attPos = -9.53674316E-07,-0.446745872,0
 	attPos0 = -2.82539415,-0.868697643,2.38418252E-07
 	rot = 0,1.00000012,6.322621E-08,-1.1920929E-07
@@ -4611,10 +4755,10 @@ PART
 {
 	part = CA.ETbutt_4294697528
 	partName = Part
-	pos = 0.296212554,9.58090878,4.83033895
+	pos = 0.296212554,9.58090878,4.82033968
 	attPos = 0,0,0
 	attPos0 = -1.36424227E-12,1.90734863E-06,2.86102477E-06
-	rot = -1.45661261E-13,-1.00000012,1.45390061E-07,-2.38418579E-07
+	rot = -1.38555833E-13,-1.00000012,1.45390061E-07,-2.38418579E-07
 	attRot = 0,0,0,1
 	attRot0 = -1.49011626E-07,2.08616228E-07,3.55271326E-15,-1
 	mir = 1,1,1
@@ -4681,10 +4825,10 @@ PART
 {
 	part = CA.ETnose_4294697484
 	partName = Part
-	pos = 0.296212554,27.0809078,4.830338
+	pos = 0.296212554,27.0809078,4.82033873
 	attPos = 0,0,0
 	attPos0 = 2.06767958E-12,17.5,-1.54957149E-06
-	rot = -1.45661261E-13,-1.00000012,1.45390061E-07,-2.38418579E-07
+	rot = -1.38555833E-13,-1.00000012,1.45390061E-07,-2.38418579E-07
 	attRot = 0,0,0,1
 	attRot0 = -1.49011626E-07,2.08616228E-07,3.55271326E-15,-1
 	mir = 1,1,1
@@ -4780,7 +4924,7 @@ PART
 {
 	part = CA.decouplerLRB_4294697434
 	partName = Part
-	pos = -3.92439461,10.0066214,4.83035135
+	pos = -3.92439651,10.0066214,4.82035255
 	attPos = -0.271643639,0.0136737823,0
 	attPos0 = 4.49207258,0.412038237,4.76837329E-07
 	rot = 1.95216927E-07,-0.707106829,4.32016449E-08,0.707106948
@@ -4886,7 +5030,7 @@ PART
 {
 	part = B2.LRB.long_4294697368
 	partName = Part
-	pos = -3.92439747,13.6066275,4.83027887
+	pos = -3.92439938,13.6066275,4.82027912
 	attPos = 0,0,0
 	attPos0 = -3.78226218E-06,3.59999943,1.30043225E-06
 	rot = 1.02806261E-07,-0.707106829,4.32015668E-08,-0.707106948
@@ -4983,7 +5127,7 @@ PART
 {
 	part = B2.LRB.mid_4294697320
 	partName = Part
-	pos = -3.92440128,23.6066456,4.83031225
+	pos = -3.92440319,23.6066456,4.82031298
 	attPos = 0,0,0
 	attPos0 = 8.34466277E-07,10,-1.90735113E-06
 	rot = 1.02806261E-07,-0.707106829,4.32015668E-08,-0.707106948
@@ -5078,10 +5222,10 @@ PART
 {
 	part = B2.LRB.nose_4294697272
 	partName = Part
-	pos = -3.9244051,27.6066551,4.83033419
+	pos = -3.92440701,27.6066551,4.82033491
 	attPos = 0,0,0
 	attPos0 = 2.38418352E-07,4.00000191,-1.90735022E-06
-	rot = 1.34322804E-07,0.382683575,-1.89748789E-07,-0.923879802
+	rot = 1.34322804E-07,0.382683575,-1.89748818E-07,-0.923879802
 	attRot = 2.98023206E-08,0.382683337,-5.96046448E-08,-0.923879683
 	attRot0 = -6.3220277E-08,-0.923879504,2.10734452E-08,0.382683575
 	mir = 1,1,1
@@ -5194,7 +5338,7 @@ PART
 {
 	part = B2.LRB.engine_4294697196
 	partName = Part
-	pos = -3.92439842,6.60661793,4.83034229
+	pos = -3.92440033,6.60661793,4.82034302
 	attPos = 0,0,0
 	attPos0 = -2.98025554E-07,-6.99999809,-1.90734977E-06
 	rot = 1.02806261E-07,-0.707106829,4.32015668E-08,-0.707106948
@@ -5305,7 +5449,7 @@ PART
 {
 	part = CA.STBE_4294697146
 	partName = Part
-	pos = -3.27439165,4.95661736,5.48040247
+	pos = -3.27439356,4.95661736,5.47040415
 	attPos = 0,0,0
 	attPos0 = -0.650001645,-1.64999676,0.649998546
 	rot = -5.5984188E-08,-1.1920929E-07,8.42943351E-08,1.00000024
@@ -5494,7 +5638,7 @@ PART
 {
 	part = CA.STBE_4294697022
 	partName = Part
-	pos = -3.27440119,4.95661736,4.18026638
+	pos = -3.27440357,4.95661736,4.17026663
 	attPos = 0,0,0
 	attPos0 = 0.649999619,-1.64999676,0.649998128
 	rot = -1.32608648E-07,0.707106948,1.6541469E-07,0.707106829
@@ -5683,10 +5827,10 @@ PART
 {
 	part = CA.STBE_4294696898
 	partName = Part
-	pos = -4.57448483,4.95661736,4.18029642
+	pos = -4.57448769,4.95661736,4.17029715
 	attPos = 0,0,0
 	attPos0 = 0.649999917,-1.64999676,-0.650001407
-	rot = -8.42937169E-08,1.00000024,1.82435571E-07,0
+	rot = -8.42937027E-08,1.00000024,1.82435571E-07,0
 	attRot = 0,0,0,1
 	attRot0 = 1.8966081E-07,-0.707106829,-1.89660753E-07,-0.707106709
 	mir = 1,1,1
@@ -5872,7 +6016,7 @@ PART
 {
 	part = CA.STBE_4294696774
 	partName = Part
-	pos = -4.57441521,4.95662117,5.48042011
+	pos = -4.57441759,4.95662117,5.47042179
 	attPos = 0,0,0
 	attPos0 = -0.650001109,-1.64999485,-0.650001943
 	rot = 1.33992213E-08,0.707107127,-1.33995499E-08,-0.70710665
@@ -6061,7 +6205,7 @@ PART
 {
 	part = launchClamp1_4294696650
 	partName = Part
-	pos = -5.573946,3.17441177,3.18072987
+	pos = -5.57394934,3.17441177,3.17072916
 	attPos = 0,0,0
 	attPos0 = 1.64945138,-3.43220043,-1.64944971
 	rot = 1.34323017E-07,-0.382683605,-1.23175695E-07,-0.923879743
@@ -6099,7 +6243,7 @@ PART
 		scaleFactor = 1.51972461
 		height = 3.8345623
 		stagingEnabled = True
-		towerRot = -1.34322974E-07,0.382683516,1.23175695E-07,-0.923879504
+		towerRot = -1.34322988E-07,0.382683516,1.23175681E-07,-0.923879504
 		EVENTS
 		{
 		}
@@ -6166,10 +6310,10 @@ PART
 {
 	part = launchClamp1_4294696540
 	partName = Part
-	pos = -2.27265644,3.09815979,3.1785531
+	pos = -2.27265739,3.09815979,3.1685524
 	attPos = 0,0,0
 	attPos0 = 1.65164566,-3.50845337,1.6516422
-	rot = -1.34322775E-07,-0.382683575,5.56381039E-08,0.923879802
+	rot = -1.34322789E-07,-0.382683575,5.56380968E-08,0.923879802
 	attRot = 0,0,0,1
 	attRot0 = -3.85588717E-09,0.923879564,1.04542814E-07,-0.382683516
 	mir = 1,1,1
@@ -6204,7 +6348,7 @@ PART
 		scaleFactor = 1.48950303
 		height = 3.75831032
 		stagingEnabled = True
-		towerRot = 1.34322747E-07,0.382683456,-5.56381288E-08,0.923879504
+		towerRot = 1.34322718E-07,0.382683426,-5.56380826E-08,0.923879504
 		EVENTS
 		{
 		}
@@ -6271,7 +6415,7 @@ PART
 {
 	part = launchClamp1_4294696430
 	partName = Part
-	pos = -5.57714128,2.98534203,6.48308802
+	pos = -5.57714415,2.98534203,6.47308969
 	attPos = 0,0,0
 	attPos0 = -1.65264368,-3.62127018,-1.65264952
 	rot = -5.56378907E-08,0.923879802,4.449155E-08,0.382683575
@@ -6309,7 +6453,7 @@ PART
 		scaleFactor = 1.44479084
 		height = 3.64549255
 		stagingEnabled = True
-		towerRot = 5.56378872E-08,-0.923879504,-4.44915678E-08,0.382683456
+		towerRot = 5.56378836E-08,-0.923879504,-4.44915571E-08,0.382683426
 		EVENTS
 		{
 		}
@@ -6376,10 +6520,10 @@ PART
 {
 	part = launchClamp1_4294696320
 	partName = Part
-	pos = -2.26576996,3.12421036,6.48896456
+	pos = -2.26577091,3.12421036,6.47896719
 	attPos = 0,0,0
 	attPos0 = -1.65851223,-3.48240089,1.65851045
-	rot = -1.97683264E-07,0.923879743,4.44914647E-08,-0.382683426
+	rot = -1.97683278E-07,0.923879623,4.44914718E-08,-0.382683367
 	attRot = 0,0,0,1
 	attRot0 = 2.55441648E-07,-0.923879504,-3.01381604E-08,-0.382683426
 	mir = 1,1,1
@@ -6414,7 +6558,7 @@ PART
 		scaleFactor = 1.4998287
 		height = 3.78436089
 		stagingEnabled = True
-		towerRot = 1.97683221E-07,-0.923879564,-4.44914825E-08,-0.382683426
+		towerRot = 1.97683264E-07,-0.923879564,-4.44914967E-08,-0.382683337
 		EVENTS
 		{
 		}
@@ -6481,10 +6625,10 @@ PART
 {
 	part = CA.heavySep_4294696210
 	partName = Part
-	pos = -2.76587725,6.07448578,3.6717639
+	pos = -2.76587915,6.07448578,3.66176414
 	attPos = 0,0,0
 	attPos0 = 1.15851116,-0.532132149,1.15850842
-	rot = -0.120590664,0.37940982,-0.0499503091,-0.915975809
+	rot = -0.120590664,0.37940982,-0.0499503091,-0.91597569
 	attRot = 0.1305262,0,0,0.991444886
 	attRot0 = 0.0499502569,-0.915975571,0.120590337,0.379409581
 	mir = 1,1,1
@@ -6592,7 +6736,7 @@ PART
 {
 	part = CA.decouplerLRB_4294696150
 	partName = Part
-	pos = 4.51682091,10.0066233,4.83034563
+	pos = 4.51682281,10.0066233,4.82034683
 	attPos = 0.271641731,0.0136756897,0
 	attPos0 = -4.49207258,0.412038237,-4.29153579E-06
 	rot = 4.03833099E-07,0.707106709,-4.32016023E-08,0.707107067
@@ -6698,10 +6842,10 @@ PART
 {
 	part = B2.LRB.long_4294696084
 	partName = Part
-	pos = 4.51682377,13.6066275,4.83027124
+	pos = 4.51682568,13.6066275,4.82027149
 	attPos = 0,0,0
 	attPos0 = -3.78226218E-06,3.59999943,1.30043225E-06
-	rot = 7.60080496E-08,-0.707106948,4.32014389E-08,0.707106829
+	rot = 7.60080709E-08,-0.707106948,4.32014247E-08,0.707106829
 	attRot = 0,-0.707106709,0,-0.707106709
 	attRot0 = 2.10734243E-07,-1,8.42937098E-08,-2.08616228E-07
 	mir = 1,1,1
@@ -6795,10 +6939,10 @@ PART
 {
 	part = B2.LRB.mid_4294696036
 	partName = Part
-	pos = 4.51682758,23.6066456,4.8302989
+	pos = 4.51682949,23.6066456,4.82029963
 	attPos = 0,0,0
 	attPos0 = 8.34466277E-07,10,-1.90735113E-06
-	rot = 7.60080496E-08,-0.707106948,4.32014389E-08,0.707106829
+	rot = 7.60080709E-08,-0.707106948,4.32014247E-08,0.707106829
 	attRot = 0,-0.707106709,0,-0.707106709
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
@@ -6890,10 +7034,10 @@ PART
 {
 	part = B2.LRB.nose_4294695988
 	partName = Part
-	pos = 4.5168314,27.6066532,4.83032751
+	pos = 4.51683331,27.6066532,4.82032824
 	attPos = 0,0,0
 	attPos0 = 2.38418352E-07,4.00000191,-1.90735022E-06
-	rot = 1.93502785E-07,0.382683486,-1.00341907E-07,0.923879862
+	rot = 1.93502785E-07,0.382683486,-1.00341879E-07,0.923879623
 	attRot = 2.98023206E-08,0.382683337,-5.96046448E-08,-0.923879683
 	attRot0 = -6.3220277E-08,-0.923879504,2.10734452E-08,0.382683575
 	mir = 1,1,1
@@ -7006,10 +7150,10 @@ PART
 {
 	part = B2.LRB.engine_4294695912
 	partName = Part
-	pos = 4.51682472,6.60661793,4.830338
+	pos = 4.51682663,6.60661793,4.82033873
 	attPos = 0,0,0
 	attPos0 = -2.98025554E-07,-6.99999809,-1.90734977E-06
-	rot = 7.60080496E-08,-0.707106948,4.32014389E-08,0.707106829
+	rot = 7.60080709E-08,-0.707106948,4.32014247E-08,0.707106829
 	attRot = 0,-0.707106709,0,-0.707106709
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
@@ -7117,10 +7261,10 @@ PART
 {
 	part = CA.STBE_4294695862
 	partName = Part
-	pos = 3.86683941,4.95661736,4.18028212
+	pos = 3.86684132,4.95661736,4.17028236
 	attPos = 0,0,0
 	attPos0 = -0.650001645,-1.64999676,0.649998546
-	rot = -8.4293923E-08,1.00000024,3.34232233E-08,1.1920929E-07
+	rot = -8.42939514E-08,1.00000024,3.34232269E-08,1.1920929E-07
 	attRot = 0,0,0,1
 	attRot0 = 1.4210853E-14,0.707106829,-1.4210853E-14,-0.707106829
 	mir = 1,1,1
@@ -7306,10 +7450,10 @@ PART
 {
 	part = CA.STBE_4294695738
 	partName = Part
-	pos = 3.86683273,4.95661354,5.48036337
+	pos = 3.86683464,4.95661354,5.47036505
 	attPos = 0,0,0
 	attPos0 = 0.649999619,-1.64999676,0.649998128
-	rot = 1.02810695E-07,0.707106769,-4.32041745E-08,-0.707107008
+	rot = 1.02810745E-07,0.707106769,-4.32042029E-08,-0.707107008
 	attRot = 0,0,0,1
 	attRot0 = 1.05367135E-07,-8.94069458E-08,-1.05367121E-07,-1
 	mir = 1,1,1
@@ -7495,10 +7639,10 @@ PART
 {
 	part = CA.STBE_4294695614
 	partName = Part
-	pos = 5.1669035,4.95661736,5.48041677
+	pos = 5.16690683,4.95661736,5.47041893
 	attPos = 0,0,0
 	attPos0 = 0.649999917,-1.64999676,-0.650001407
-	rot = 2.64603074E-07,0,-8.42968291E-08,-1.00000024
+	rot = 2.64603244E-07,0,-8.42969428E-08,-1.00000024
 	attRot = 0,0,0,1
 	attRot0 = 1.8966081E-07,-0.707106829,-1.89660753E-07,-0.707106709
 	mir = 1,1,1
@@ -7684,7 +7828,7 @@ PART
 {
 	part = CA.STBE_4294695490
 	partName = Part
-	pos = 5.16683197,4.95662498,4.18028688
+	pos = 5.16683388,4.95662498,4.17028761
 	attPos = 0,0,0
 	attPos0 = -0.650001109,-1.64999485,-0.650001943
 	rot = 1.62410345E-07,-0.707106829,-7.60082486E-08,-0.707106948
@@ -7873,10 +8017,10 @@ PART
 {
 	part = launchClamp1_4294695366
 	partName = Part
-	pos = 6.16636753,3.17441559,3.18072081
+	pos = 6.16636992,3.17441559,3.1707201
 	attPos = 0,0,0
 	attPos0 = -1.64945018,-3.43220091,-1.64945161
-	rot = 1.93503297E-07,-0.382683933,-1.67879534E-07,0.923879683
+	rot = 1.93503325E-07,-0.382683843,-1.67879492E-07,0.923879623
 	attRot = 0,0,0,1
 	attRot0 = 6.02237051E-08,0.382683396,-7.69432305E-08,0.923879564
 	mir = 1,1,1
@@ -7911,7 +8055,7 @@ PART
 		scaleFactor = 1.51972568
 		height = 3.83456802
 		stagingEnabled = True
-		towerRot = -1.93503226E-07,0.382683843,1.67879492E-07,0.923879385
+		towerRot = -1.93503269E-07,0.382683784,1.6787952E-07,0.923879445
 		EVENTS
 		{
 		}
@@ -7978,10 +8122,10 @@ PART
 {
 	part = launchClamp1_4294695256
 	partName = Part
-	pos = 2.86503649,3.09815979,3.17855453
+	pos = 2.86503744,3.09815979,3.16855431
 	attPos = 0,0,0
 	attPos0 = -1.65164602,-3.50845289,1.65164077
-	rot = -4.49165256E-08,0.382683486,-5.56377557E-08,0.923879862
+	rot = -4.49165256E-08,0.382683486,-5.5637738E-08,0.923879623
 	attRot = 0,0,0,1
 	attRot0 = -5.84604578E-08,-0.923879504,-1.88064831E-07,-0.382683516
 	mir = 1,1,1
@@ -8016,7 +8160,7 @@ PART
 		scaleFactor = 1.48950386
 		height = 3.75831223
 		stagingEnabled = True
-		towerRot = 4.49165185E-08,-0.382683367,5.56377735E-08,0.923879623
+		towerRot = 4.4916483E-08,-0.382683396,5.56377522E-08,0.923879564
 		EVENTS
 		{
 		}
@@ -8083,10 +8227,10 @@ PART
 {
 	part = launchClamp1_4294695146
 	partName = Part
-	pos = 6.16957426,2.98534012,6.4830842
+	pos = 6.16957712,2.98534012,6.47308588
 	attPos = 0,0,0
 	attPos0 = 1.65264487,-3.62127066,-1.65264904
-	rot = -1.88682296E-08,0.923879862,-1.34324523E-07,-0.382683486
+	rot = -1.88682883E-08,0.923879623,-1.34324537E-07,-0.382683486
 	attRot = 0,0,0,1
 	attRot0 = 3.32060992E-08,0.382683426,1.7436426E-07,-0.923879504
 	mir = 1,1,1
@@ -8121,7 +8265,7 @@ PART
 		scaleFactor = 1.44479084
 		height = 3.64549255
 		stagingEnabled = True
-		towerRot = 1.88682119E-08,-0.923879623,1.34324495E-07,-0.382683367
+		towerRot = 1.88682368E-08,-0.923879564,1.34324466E-07,-0.382683396
 		EVENTS
 		{
 		}
@@ -8188,10 +8332,10 @@ PART
 {
 	part = launchClamp1_4294695036
 	partName = Part
-	pos = 2.85821295,3.12421036,6.4889636
+	pos = 2.8582139,3.12421036,6.47896576
 	attPos = 0,0,0
 	attPos0 = 1.65851128,-3.48240042,1.65851068
-	rot = 2.87088312E-07,0.923879683,-1.34322278E-07,0.382683933
+	rot = 2.87088284E-07,0.923879623,-1.34322221E-07,0.382683843
 	attRot = 0,0,0,1
 	attRot0 = 1.82310345E-07,0.923879564,1.65590819E-07,-0.382683516
 	mir = 1,1,1
@@ -8226,7 +8370,7 @@ PART
 		scaleFactor = 1.4998287
 		height = 3.78436089
 		stagingEnabled = True
-		towerRot = -2.87088284E-07,-0.923879385,1.34322221E-07,0.382683843
+		towerRot = -2.87088284E-07,-0.923879445,1.34322264E-07,0.382683784
 		EVENTS
 		{
 		}
@@ -8293,10 +8437,10 @@ PART
 {
 	part = CA.heavySep_4294694926
 	partName = Part
-	pos = 3.35829353,6.07448769,3.67177916
+	pos = 3.35829544,6.07448769,3.6617794
 	attPos = 0,0,0
 	attPos0 = -1.15851104,-0.532132149,1.15850854
-	rot = 0.120590471,0.37940973,-0.0499503464,0.915975749
+	rot = 0.120590486,0.37940973,-0.0499503538,0.915975749
 	attRot = 0.1305262,0,0,0.991444886
 	attRot0 = 0.0499504656,0.91597563,-0.120590433,0.379409641
 	mir = 1,1,1
@@ -8404,14 +8548,14 @@ PART
 {
 	part = ShuttleTruss_4294694866
 	partName = Part
-	pos = 0.296212077,10.5378914,0.13158676
+	pos = 0.296212077,10.5378914,0.12158674
 	attPos = 0,0,0
 	attPos0 = 0,-4.62999773,0
 	rot = 0,0,0,-1
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,-1
 	mir = 1,1,1
-	symMethod = Radial
+	symMethod = Mirror
 	autostrutMode = Off
 	rigidAttachment = False
 	istg = 0
@@ -8456,160 +8600,16 @@ PART
 }
 PART
 {
-	part = elevon25_4294700936
-	partName = Part
-	pos = -2.22483349,21.0315571,0.486939907
-	attPos = -0.0753593445,0,-9.406358E-08
-	attPos0 = -0.84172678,-1.07170868,1.00350007E-07
-	rot = -1.39574172E-06,-0.0871564299,-5.65960022E-07,0.99619472
-	attRot = -0.54167515,-0.54167515,-0.454519451,0.454519451
-	attRot0 = 1.43834268E-06,7.59959107E-07,4.41660632E-07,-1
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = elevon25_4294410596
-	srfN = srfAttach,B2.canard_4293914906
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = SyncModuleControlSurface
-		isEnabled = True
-		mirrorDeploy = True
-		usesMirrorDeploy = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		deploy = False
-		deployInvert = False
-		partDeployInvert = False
-		authorityLimiter = 100
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ActionToggle
-			{
-				actionGroup = None
-			}
-			ActionExtend
-			{
-				actionGroup = None
-			}
-			ActionRetract
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = elevon25_4294410596
-	partName = Part
-	pos = 2.81725883,21.0315571,0.486939788
-	attPos = -0.0753592849,0,5.96046377E-08
-	attPos0 = -0.841726601,-1.07170868,-1.49011584E-07
-	rot = -5.65960192E-07,0.996194661,-1.39574195E-06,-0.0871564448
-	attRot = -0.54167515,-0.54167515,-0.454519451,0.454519451
-	attRot0 = 1.43834302E-06,7.37607479E-07,-4.41660575E-07,1
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = elevon25_4294700936
-	srfN = srfAttach,B2.canard_4294693270
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = SyncModuleControlSurface
-		isEnabled = True
-		mirrorDeploy = False
-		usesMirrorDeploy = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		deploy = False
-		deployInvert = False
-		partDeployInvert = False
-		authorityLimiter = 100
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ActionToggle
-			{
-				actionGroup = None
-			}
-			ActionExtend
-			{
-				actionGroup = None
-			}
-			ActionRetract
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
 	part = Airlock_4294694536
 	partName = Part
-	pos = 0.296212077,20.147892,0.131585807
+	pos = 0.296212077,20.147892,0.121585786
 	attPos = 0,-0.32728672,0
 	attPos0 = 0,4.97999954,0
 	rot = 0,0,0,1
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
-	symMethod = Radial
+	symMethod = Mirror
 	autostrutMode = Off
 	rigidAttachment = False
 	istg = 0
@@ -8685,14 +8685,14 @@ PART
 {
 	part = dockingPort2_4294694436
 	partName = Part
-	pos = 0.296212077,19.4178925,-0.918395281
+	pos = 0.296212077,19.4178925,-0.928395331
 	attPos = 0,4.76837158E-07,0.088019371
 	attPos0 = 0,-0.729999661,-1.13800001
 	rot = 0.707106829,0,0,-0.707106829
 	attRot = 0.707106709,0,0,-0.707106709
 	attRot0 = 0.707106829,0,0,-0.707106829
 	mir = 1,1,1
-	symMethod = Radial
+	symMethod = Mirror
 	autostrutMode = Off
 	rigidAttachment = False
 	istg = 0
@@ -8759,14 +8759,14 @@ PART
 {
 	part = CA.decalSide_4294704396
 	partName = Part
-	pos = -1.33014286,13.3113289,0.635943532
+	pos = -1.33014286,13.3113289,0.625943482
 	attPos = 0,0,0.504357576
 	attPos0 = -1.62635493,-1.85656357,8.94069672E-08
 	rot = 0,0.707106829,0,0.707106829
 	attRot = 0,0,0,1
 	attRot0 = 0,0.707106829,0,0.707106829
 	mir = 1,1,1
-	symMethod = Mirror
+	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
 	istg = 0
@@ -8830,14 +8830,14 @@ PART
 {
 	part = CA.decalSide_4294704214
 	partName = Part
-	pos = 1.92256701,13.3113289,0.635943532
+	pos = 1.92256701,13.3113289,0.625943482
 	attPos = 0,0,0.504357576
 	attPos0 = 1.62635493,-1.85656357,8.94069672E-08
 	rot = 0,-0.707106829,0,0.707106709
 	attRot = 0,0,0,1
 	attRot0 = 0,-0.707106829,0,0.707106709
 	mir = 1,1,1
-	symMethod = Mirror
+	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
 	istg = 0
@@ -8901,7 +8901,7 @@ PART
 {
 	part = CA.decalName_4294701592
 	partName = Part
-	pos = -1.3275888,19.6527519,-0.210280597
+	pos = -1.3275888,19.6527519,-0.220280617
 	attPos = 0,0,0
 	attPos0 = -1.62380087,4.48485947,-0.341866404
 	rot = 0,0.707106829,0,0.707106829
@@ -8971,7 +8971,7 @@ PART
 {
 	part = CA.decalName_4294696788
 	partName = Part
-	pos = 1.92001307,19.6405144,-0.211790085
+	pos = 1.92001307,19.6405144,-0.221790105
 	attPos = 0,0,0
 	attPos0 = 1.62380099,4.47262192,-0.343375891
 	rot = -0.707106829,0,0.707106829,0
@@ -9041,7 +9041,7 @@ PART
 {
 	part = CAFuelCell_4294645406
 	partName = Part
-	pos = 0.296212077,9.90711212,1.71627295
+	pos = 0.296212077,9.90711212,1.70627296
 	attPos = 0,-0.309621811,0
 	attPos0 = 0,-4.95115852,1.58468711
 	rot = 0.707106829,1.8966081E-07,0.707106829,1.8966081E-07
@@ -9139,14 +9139,14 @@ PART
 {
 	part = CAFuelCell_4294644366
 	partName = Part
-	pos = -0.68534565,19.5810089,1.6428051
+	pos = -0.68534565,19.5810089,1.63280499
 	attPos = 0,-0.309621811,0
 	attPos0 = -0.981557727,4.41311646,1.51121926
 	rot = 4.00933295E-08,0.896873057,-1.97718126E-08,-0.44228816
 	attRot = 0,0,0,1
 	attRot0 = 4.00933295E-08,0.896873057,-1.97718126E-08,-0.44228816
 	mir = 1,1,1
-	symMethod = Mirror
+	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
 	istg = 0
@@ -9238,14 +9238,14 @@ PART
 {
 	part = CAFuelCell_4294643574
 	partName = Part
-	pos = 1.2777698,19.5810089,1.6428051
+	pos = 1.2777698,19.5810089,1.63280499
 	attPos = 0,-0.309621811,0
 	attPos0 = 0.981557727,4.41311646,1.51121926
 	rot = 1.9771818E-08,0.442288101,-4.00933331E-08,-0.896873057
 	attRot = 0,0,0,1
 	attRot0 = 1.9771818E-08,0.442288101,-4.00933331E-08,-0.896873057
 	mir = 1,1,1
-	symMethod = Mirror
+	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
 	istg = 0
